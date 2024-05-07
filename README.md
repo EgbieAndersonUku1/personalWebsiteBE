@@ -1,6 +1,6 @@
-# Software Portfolio Website
+# Welcome to my personal site
 
-Welcome to my software portfolio website! This website showcases my projects and skills in software development using various technologies and Frameworks.The portfolio website was built using HTML, CSS, Vanilla JavaScript, and leverages the Node.js environment, allowing for server-side scripting and enhanced functionalities beyond traditional web browser capabilities.
+Welcome to my portfolio website! This website showcases my projects and skills in software development using various technologies and Frameworks.The portfolio website was built using HTML, CSS, Vanilla JavaScript, and leverages the Node.js environment, allowing for server-side scripting and enhanced functionalities beyond traditional web browser capabilities.
 
 ## Features
 
@@ -18,3 +18,9 @@ Welcome to my software portfolio website! This website showcases my projects and
 ## Work in Progress
 
 - **Responsiveness**: The site is not yet optimized for smaller devices, such as tablets and mobile phones. However, improvements in this area are currently underway.
+
+- **Tests**: Will also incoporate tests for the website
+
+
+## You can view my projects by clicking on the link below
+https://egbieandersonuku1.github.io/personalWebsite/
