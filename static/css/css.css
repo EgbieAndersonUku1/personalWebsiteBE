@@ -1,0 +1,982 @@
+@import url('https://fonts.googleapis.com/css2?family=Madimi+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    transition: 1s ease-in-out;
+    
+}
+
+:root {
+
+    --box-shadow-primary: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    --box-shadow-secondary: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+
+    /* The font sizes */
+    --font-size-lg: 4.375rem; /* 70px */
+    --font-size-md: 3.75rem; /* 60px */
+    --font-size-sm: 1.5625rem; /* 25px */
+    --font-size-xsm: 0.875rem; /* 13px */
+
+    /* paddings */
+    --padding-lg: 100px;
+    --padding-md: 60px;
+    --padding-sm: 25px;
+    --padding-xs: 10px;
+
+    /* margins */
+    --margin-lg: 100px;
+    --margin-md: 60px;
+
+    /* colors */
+    --dark-red: #5a0e0;
+    --dark-blue: rgb(2, 2, 56);
+    --dark-blue2:  rgb(36, 6, 80);
+    --green-color:  rgb(2, 37, 2);
+    --primary-color: #FCC32D; 
+
+    /* widths */
+    --global-width-md: 60%;
+    --global-width-lg: 75%;
+}
+
+
+body {
+    overflow-x: hidden;
+    font-family: Poppins;
+}
+
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+
+img {
+  cursor: pointer;
+}
+
+img:hover {
+  opacity: 0.8;
+}
+
+.not-found-img {
+  height: 500px;
+}
+
+/* --------------------------- buttons ---------------------------------------------- */
+.buttons {
+  display: flex;
+  width: 100%;
+  margin-top: 8px;
+  justify-content: flex-end;
+}
+
+.buttons > a {
+  cursor: pointer;
+}
+
+.button-md {
+    border: 1px solid;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    width: 50%;
+}
+
+.button-lg {
+ 
+  border: 1px solid black;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  text-align: center;
+  width: 100%;
+
+  
+}
+
+#project-sidebar .container .cards .card .no-site {
+  cursor: not-allowed;
+}
+
+/* --------------------------- Form inputs ---------------------------------------------- */
+
+input[type="date"],
+input[type="text"],
+select {
+  border: 3px solid lavender;
+  height: 23px;
+  font-size: 0.938rem; 
+  font-weight: 200;
+  width: 100%;
+}
+
+
+.search-form {
+  display: grid;
+ 
+}
+
+.search-form > label {
+  padding-top: 3px;
+}
+.to-date,
+.from-date {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.search-by-date {
+  display: flex;
+  gap: 10px;
+}
+
+
+label {
+  text-transform: capitalize;
+}
+/* --------------------------- Icons  ------------------------------------------------- */
+
+.footer-icon {
+  width: 25px;
+  height: 25px;
+  padding-right: 2px;
+}
+
+
+.icons {
+  padding-left: 10px;
+  position: fixed;
+}
+
+
+.icon {
+  
+  background: lavender;
+  border-radius: 50%;
+  cursor: pointer;
+
+  /* sizes */
+  height: 35px;
+  width: 35px; 
+ 
+  transform: translateY(10px);
+}
+
+.skill-icon {
+
+  /* sizes */
+  height: 50px;
+  width: 50px;
+
+  opacity: 0.9;
+}
+
+/* --------------------------- End of Icons  --------------------------------------------- */
+
+
+
+
+/* --------------------------- Flex ------------------------------------------------------ */
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+ 
+}
+
+.flex-space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ---------------------------- End of Flex ------------------------------------- */
+
+
+
+
+/* ------------------------------- The fonts -------------------------------------- */
+
+/* Poppins font */
+.poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+
+/* ----------------------------  Colors start here ---------------------------- */
+.color-white {
+  color: white;
+}
+
+.color-red {
+  color: var(--dark-red);
+}
+
+
+
+/* ----------------------------  Background start here ---------------------------- */
+.blue-bg {
+  background: var(--dark-blue);
+}
+
+.green-bg {
+  background: rgb(2, 37, 2);
+}
+
+.primary-color {
+  background: var(--primary-color);
+}
+
+.red-bg {
+  background: rgb(99, 7, 7);
+}
+
+
+
+
+
+
+/* ----------------------------  Padding here ----------------------------------- */
+
+.padding-top-lg {
+  padding-top: var(--padding-lg);
+}
+
+.padding-top-md {
+  padding-top: var(--padding-md);
+}
+
+.padding-top-sm {
+  padding-top: var(--padding-sm);
+}
+
+.padding-top-xsm {
+  padding-top: var(--padding-xs);
+}
+
+.padding-bottom-sm {
+  padding-bottom: 40px;
+}
+.padding-bottom-xsm {
+  padding-bottom: var(--padding-xs);
+}
+
+
+
+/* ----------------------------  Images   ---------------------------------------------- */
+
+
+/* Call to action image  */
+.call-to-action-img {
+  opacity: 0.6;
+}
+
+.call-to-action-img {
+  position: absolute;
+  top: 10px; 
+  right: 90px;
+  width: 640px;
+}
+
+/* The technical skill image png */
+.technical-skill-img {
+  height: 500px;
+}
+
+/* The FAQ image */
+.FAQ-main-image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+/* the bot icon project image */
+.bot-img {
+  background: #4541c9;
+}
+
+
+/* ----------------------------  Banner class   ---------------------------------------------- */
+.banner {
+
+  background: var(--primary-color);
+  color: white;
+  cursor: pointer;
+
+  /* fonts */
+  font-weight: bolder;
+  font-size: 1.125rem;
+  text-transform: capitalize;
+
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  
+}
+
+
+/* The spinner class */
+.spinner {
+
+  /* borders */
+  border-radius: 50%;
+  border-top: 4px solid blue; 
+  border-bottom: 4px solid white; 
+
+
+  /* positions */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+
+  /* show */
+  display: none;
+
+  /* animation */
+  animation: spin 1s linear infinite; 
+}
+
+
+
+/* ----------------------------- The navigation section ----------------------------------- */
+
+nav .container {
+
+  /* flex grid */
+  display: grid;
+  grid-template-columns: 50% 50%;
+
+  /* postion*/
+  position: fixed;
+  z-index: 1000;
+
+  /* text */
+  font-weight: bolder;
+  text-align: center;
+  text-transform: uppercase;
+
+  /* width */
+  width: 100%;
+}
+
+
+.nav-body {
+  
+  /* fonts */
+  font-size: var(--font-size-xsm);
+
+  /* flex */
+  display: flex;
+  justify-content: space-between;
+
+  /* width */
+  width: var(--global-width-md);
+
+}
+
+.nav-link {
+  color: white;
+}
+
+
+
+/* ----------------------------  Fonts -------------------------------- */
+.font-lg {
+  font-size: var(--font-size-lg);
+}
+
+.font-xsm {
+  font-size: var(--font-size-xsm);
+}
+
+/* ----------------------------  Button section starts here ----------- */
+
+.link-btn {
+  border: 1px solid lavender;
+}
+
+.load-results-btn {
+  display: none;
+}
+
+
+.reset-btn,
+.view-more-btn,
+.search-btn {
+ 
+  border: 1px solid;
+  margin-bottom: 40px;
+  padding: 10px;
+  text-transform: uppercase;
+  
+}
+
+.reset-btn,
+.search-btn {
+  cursor: pointer;
+  width: 20%;
+  margin-top: 6px;
+
+}
+
+.sidebar-search-btn,
+.sidebar-close-btn,
+.load-more-btn,
+.load-results-btn,
+.view-more-btn {
+  font-size: var(--font-size-xsm);
+  width: 14%;
+  margin-top: 4px;
+
+}
+
+.buttons a:hover {
+  opacity: 0.8;
+}
+
+
+
+
+/* ----------------------------  Cards section ------------------------------- */
+
+
+/* global card - Affect all cards unless specified otherwise */
+
+.cards .card {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+
+.cards .card .head img:hover {
+  opacity: 0.8;
+}
+
+
+.cards .card h1 {
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.cards .card .body {
+  font-size: 0.938rem;
+  font-weight: 300;
+}
+
+.cards .card .head img {
+
+  border: 2px solid lavender;
+  border-radius: 50%;
+  cursor: pointer;
+
+  object-fit: cover;
+
+  /* sizing */
+  height: 100px;
+  width: 100px;
+  
+}
+
+
+/* cards within the skill section */
+#skills .cards .card {
+  border: 3px solid lavender;
+  box-shadow: none;
+  padding: 6px;
+  text-align: center;
+ 
+}
+
+#skills .cards .card:hover {
+  background: ghostwhite;
+  transform: scale(1.05);
+ 
+}
+
+
+
+/* Cards within the projects section */
+#projects .cards {
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 10px;
+
+  width: var(--global-width-lg);
+  margin: auto;
+ 
+}
+
+#projects .cards .card {
+  background: white;
+  border: 2px solid lavender;
+
+  /* grid */
+  display: grid;
+  grid-template-columns: 25% 75%;
+  gap: 2px;
+
+  /* paddings */
+  padding: 20px;
+ 
+}
+
+#projects .cards .card:hover {
+  transform: scale(1.02);
+}
+
+
+/* Project sidebar cards */
+#project-sidebar .container .cards .card {
+
+  box-shadow: var(--box-shadow-secondary);
+
+  /* grid */
+  display: grid;
+  grid-template-columns: 25% 75%;
+  grid-template-rows: auto;
+
+  /* End of grid */
+
+  height: auto;
+  margin-top: 6px;
+  padding: 20px;
+  
+
+}
+
+#project-sidebar .container .cards .card .footer ul{
+  width: 100%;
+  word-wrap: break-word;
+}
+
+
+
+/* ---------------------------  Sections ------------------------------------- */
+
+
+/* The about section */
+#about-me {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: lavender;
+}
+
+
+#about-me .container {
+ 
+  /* sizing */
+  width: var(--global-width-md);
+  margin: auto;
+
+  /* margins */
+  margin-top: var(--margin-lg);
+  margin-bottom: var(--margin-lg);
+
+  text-align: left;
+  color: #333333;
+
+
+}
+
+
+
+/* The call to action section */
+#call-to-action {
+   
+  height: 94vh; 
+  overflow: hidden;
+
+}
+  
+#call-to-action .container {
+  position: relative;
+}
+
+#call-to-action .container .info {
+  position: absolute;
+  top: 200px;
+  left: 200px;
+}
+
+
+
+/* Skills section */
+#skills {
+  padding-bottom: 100px;
+}
+
+#skills .cards {
+
+  background: white;
+  cursor: pointer;
+ 
+  /* grid */
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto;
+  column-gap: 5px;
+  row-gap: 5px;
+
+  /* sizing */
+  margin: auto;
+  width: var(--global-width-lg);
+  
+}
+
+/* The project sections */
+#projects {
+  background: lavender;
+
+}
+
+
+/* Project sidebar section */
+#project-sidebar {
+
+  background: white;
+  border-left: 4px solid lavender;
+  overflow-x: scroll;
+  transition: 2s ease-in-out;
+  width: 50%;
+
+  /* positions */
+  position: fixed;
+  top: 0;
+  right: -100000px;
+  bottom: 0;
+ 
+}
+
+
+#project-sidebar.show {
+  right: 0;
+  transition: 2s ease-in-out;
+}
+
+#project-sidebar .container {
+  padding: 10px;
+}
+
+
+
+
+
+
+  
+/* --------------------------- Utilities  ------------------------------------- */
+
+
+.bold {
+  font-weight: bold;
+}
+
+/* animates the text */
+#animated-text {
+
+  color: var(--dark-blue2);
+  display: inline-block;
+
+  /* fonts */
+  font-size: var(--font-size-sm);
+  font-weight: bolder;
+
+  overflow: hidden;
+  white-space: nowrap;
+    
+}
+
+
+/* Centers the text */
+.center {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+ 
+}
+
+
+/* Adds a display to item */
+.display-item {
+
+  background: lavender;
+  border-radius: 7%;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  width: 10%; 
+}
+
+/* hides the items */
+.hide-item {
+  display: none;
+}
+
+
+
+
+
+
+
+/* --------------------------- Table elements ------------------------------------- */
+
+#project-sidebar .container .cards .card  ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+}
+
+#project-sidebar .container .cards .card  ul li:first-child{
+  padding-top: 5px;
+}
+
+#project-sidebar .container .cards .card  ul li:hover{
+  color: #4541c9;
+  cursor: pointer;
+}
+
+ul {
+ list-style: none;
+ display: flex;
+ justify-content: space-between;
+
+}
+
+.ul-technologies {
+
+  width: 100%;
+  
+  /* flex */
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+
+
+ul li {
+  justify-content: space-around;
+}
+
+.ul-buttons li a {
+  border: 1px solid black;
+  padding: 10px;
+  width: 25%;
+  text-transform: capitalize;
+}
+
+
+
+
+.unordered-list {
+  display: flex;
+  flex-direction: column;
+  padding-top: 4px;
+}
+
+.unordered-list  li {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+/* --------------------------- FAQ ---------------------------------------------- */
+#FAQ .container {
+  position: relative;
+  
+  /* sizes */
+  height: 500px;
+  width: 90%;
+
+  margin: auto;
+  z-index: -100000;
+ 
+}
+
+
+#general-Information .container,
+#FAQ-aboutme .container,
+#contact-me .container,
+#hobbies .container{
+
+    cursor: pointer;
+    width: 70%;
+
+    /* grid */
+    display: grid;
+    grid-template-columns: 25% 75%;
+    grid-template-rows: auto;
+
+    /* margins */
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.question-container  {
+  background: white;
+  border: 2px solid var(--primary-color);
+  font-weight: 400;
+
+  /* paddings */
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-left: 8px;
+ 
+}
+
+.questions .question {
+  padding-bottom: 4px;
+
+}
+
+.question-container:hover {
+  transform: scale(1.01);
+
+}
+
+.answer-container {
+ 
+  background: ghostwhite;
+  border: 1px solid black;
+  display: none;
+  padding: 10px;
+ 
+}
+
+/* --------------------------- Footer elements ------------------------------------- */
+
+
+footer {
+  background: black;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+
+footer .container {
+
+  color: white;
+
+  /* width sizes */
+  width: var(--global-width-lg);
+  margin: auto;
+
+  /* grids */
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+
+}
+
+.footer-link {
+  color: white;
+}
+
+.footer-link-title {
+  color: var(--primary-color);
+  text-transform: capitalize;
+}
+
+
+
+/* --------------------------- search ------------------------------------- */
+#search .container {
+  width: 40%;
+  background: white;
+  padding: 30px;
+  border: 3px solid lavender;
+  
+  /* the positons */
+  position: fixed;
+  top: 40px;
+  right: -100000px;
+
+  /* display: none; */
+  padding-top: 5px;
+}
+
+#search .container.show {
+  right: 50%;
+  transition: 2s ease-in-out;
+}
+
+.not-found {
+  display: none;
+  overflow-x: hidden;
+}
+
+/* --------------------------- results for search elements ------------------------------------- */
+.results {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+
+/* --------------------------- Grid box ------------------------------------- */
+.grid-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding-left: var(--padding-sm);
+ 
+}
+
+.languages {
+  background: ghostwhite;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
