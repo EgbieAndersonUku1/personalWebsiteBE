@@ -1,4 +1,4 @@
-import repositories          from "../../repositories.js";
+import repositories          from "./repositories.js";
 import { showSpinner }       from "./utils/toggler.js";
 import ProjectPaginator      from "./utils/paginator.js";
 import { handleButtonInteraction, displayResults } from "./utils/buttonHandler.js";

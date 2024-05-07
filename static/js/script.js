@@ -1,4 +1,4 @@
-import  repositories      from "../../repositories.js";
+import repositories from "./repositories.js";
 import   ProjectPaginator from "./utils/paginator.js";
 import   TypeAnimator     from "./utils/animatedText.js";
 import { SidebarToggler, showSpinner }            from "./utils/toggler.js";
