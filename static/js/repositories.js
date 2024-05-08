@@ -48,7 +48,7 @@ addToRepository(repository);
 repository = {
     name: 'Database Challeenge',
     description: "Practise using the SQLite database to persist information for an Express app",
-    languages: ['SQlite', 'Node JS', "Express"],
+    languages: ['SQlite', 'Node JS', "Express", "JS"],
     gitLink: 'https://github.com/EgbieAndersonUku1/database-challenge',
     image: 'static/img/jpg/sqlite.jpeg',
     hasWebsite: false,
