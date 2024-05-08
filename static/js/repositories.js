@@ -415,7 +415,7 @@ addToRepository(repository);
 repository = {
     name: 'DiscordBot',
     description: "A versatile Discord bot, adept at managing various server tasks like sending direct messages, moderating, and more. Empowered by OpenAI's natural language processing, it facilitates seamless interaction, allowing users to inquire and receive responses effortlessly. In addition, it also announces when a user joins or leaves the server, monitors foul language and acts accordingly in order to foster a friendly environment",
-    languages: ['HTML', 'CSS', 'JS', 'Node JS', 'Fetch API', 'OpenAPI', 'API', 'Discordjs'],
+    languages: ['HTML', 'CSS', 'JS', 'Node JS', 'Fetch API', 'OpenAPI', 'API', 'Discordjs', 'Sinon'],
     gitLink: '',
     image: 'static/img/icons/svg/bot.svg',
     hasWebsite: false,
@@ -449,7 +449,7 @@ addToRepository(repository);
 repository = {
     name: 'Superstore',
     description: "This is a website store simulation I developed, offering users the ability to replicate the functionality of any online web store. Users can browse, add items to their basket, update or delete basket items, and checkout with chosen payment methods. Admin privileges are required to manage the store's database, facilitated through an accessible admin dashboard showcasing crucial metrics like item stock and customer orders. Note: This is a demonstration store, with no real monetary transactions. Product images sourced from Topshop and NeXT website",
-    languages: ['Python 3.6', 'Flask', 'Bootstrap', 'Sqlite3', 'SQLAlchemy', 'HTML', 'CSS'],
+    languages: ['Python 3.6', 'Flask', 'Bootstrap', 'Sqlite3', 'SQLAlchemy', 'HTML', 'CSS', 'ORM'],
     gitLink: 'https://github.com/EgbieAndersonUku1/MyStore',
     image: 'static/img/jpg/store.jpeg',
     hasWebsite: false,
@@ -480,7 +480,8 @@ repository = {
         "Product images",
         "sourced",
         "Topshop",
-        "NeXT website"
+        "NeXT website",
+        "ORM"
     ]
     
     
@@ -530,7 +531,7 @@ addToRepository(repository);
 repository = {
     name: 'Job Journal Tracker',
     description: "JobJournalTracker is a comprehensive web-based application I developed, designed for freelancers, job seekers, contractors, and more. It streamlines job tracking, allowing users to effortlessly add, modify, view, or delete job entries. By consolidating job applications, interviews, and employer responses into one accessible platform, it simplifies the job search process, akin to using a password manager for multiple accounts.",
-    languages: ['Python 3.6', 'Flask', 'Flask-SQLAlchemy', 'HTML', 'CSS', 'Python'],
+    languages: ['Python 3.6', 'Flask', 'Flask-SQLAlchemy', 'HTML', 'CSS', 'Python', 'ORM'],
     gitLink: 'https://github.com/EgbieAndersonUku1/journal_tracker',
     image: 'static/img/png/job-tracker.png',
     hasWebsite: false,
@@ -569,7 +570,8 @@ repository = {
         "platform",
         "registration",
         "Simplified job search",
-        "Viewing job entries"
+        "Viewing job entries",
+        "ORM",
     ]
     
 };
@@ -580,7 +582,7 @@ addToRepository(repository);
 repository = {
     name: 'Blogger Application',
     description: "A robust blogging application complete with authentication features like registration and login. Users can create posts, define categories, and enjoy all the essential features expected from a modern blog platform",
-    languages: ['Python 3.6', 'Flask', 'Flask-SQLAlchemy', 'HTML', 'CSS', 'Python'],
+    languages: ['Python 3.6', 'Flask', 'Flask-SQLAlchemy', 'HTML', 'CSS', 'Python', 'ORM'],
     gitLink: 'https://github.com/EgbieAndersonUku1/blogger',
     image: 'static/img/png/blogger.png',
     hasWebsite: false,
@@ -602,7 +604,8 @@ repository = {
         "Modern blog platform",
         "posts",
         "Registration",
-        "authentication"
+        "authentication",
+        "ORM"
     ]
     
 };
@@ -612,7 +615,7 @@ addToRepository(repository);
 repository = {
     name: 'Social Network Application',
     description: "This is a social network application. It allows the user to create a profile, login, edit their profile, adding profile images, add friends, block users, post or delete messages, change or reset passwords and much much more.",
-    languages: ['Python 3.6', 'Flask', 'Flask-SQLAlchemy', 'HTML', 'CSS', 'Python'],
+    languages: ['Python 3.6', 'Flask', 'Flask-SQLAlchemy', 'HTML', 'CSS', 'Python', 'ORM'],
     gitLink: 'https://github.com/EgbieAndersonUku1/blogger',
     image: 'static/img/png/social-network.png',
     hasWebsite: false,
@@ -639,7 +642,8 @@ repository = {
         "registration",
         "social",
         "Social network",
-        "Social network application"
+        "Social network application",
+        "ORM"
     ]
     
 };
@@ -649,7 +653,7 @@ addToRepository(repository);
 repository = {
     name: 'Forum',
     description: "A user-friendly thread platform featuring authentication functionalities such as registration, login, and password management. Users can create threads and engage in discussions by posting replies, fostering interactive communication within the platform",
-    languages: ['Python 3.6', 'Flask', 'Flask-SQLAlchemy', 'HTML', 'CSS', 'python'],
+    languages: ['Python 3.6', 'Flask', 'Flask-SQLAlchemy', 'HTML', 'CSS', 'python', 'ORM'],
     gitLink: 'https://github.com/EgbieAndersonUku1/forum',
     image: 'static/img/png/forum.png',
     hasWebsite: false,
@@ -676,6 +680,7 @@ repository = {
         "threads",
         "UI",
         "User-friendly interface",
+        "ORM"
     ]
     
 };
@@ -813,7 +818,7 @@ addToRepository(repository);
 repository = {
     name: 'Pwitter',
     description: "A website store that mirrors some of Twitter's features. Users can post, edit, and delete tweets, as well as follow and unfollow other users. Once signed up, they can view tweets from users they follow, creating a dynamic and interactive platform reminiscent of Twitter's functionality",
-    languages: ['Python', 'Python 3.5', 'Flask', 'SQLAlchemy', 'HTML', 'CSS', 'Bootstrap'],
+    languages: ['Python', 'Python 3.5', 'Flask', 'SQLAlchemy', 'HTML', 'CSS', 'Bootstrap', 'ORM'],
     gitLink: 'https://github.com/EgbieAndersonUku1/pwitter',
     image: 'static/img/png/twitter.png',
     hasWebsite: false,
@@ -835,7 +840,8 @@ repository = {
         "registration",
         "tweet",
         "twitter",
-        "unfollow"
+        "unfollow",
+        "ORM"
     ]
     };
 
@@ -1109,7 +1115,7 @@ addToRepository(repository);
 repository = {
     name: 'My Blog',
     description: "I successfully built a fully functional blog with an admin section. Users can create multiple blogs, each with its own commenting and reply section. The admin interface, designed with Bootstrap, allows for easy management of the blog. Additionally, I implemented a comprehensive testing strategy, including automatic, unit, manual, regression, exploration, black box, and white box testing, ensuring the reliability and robustness of the application.",
-    languages: ['Python', 'Python 2.7', 'MongoDB', 'Flask', 'Pymongo', 'Boostrap', 'HTML', 'CSS', 'JS'],
+    languages: ['Python', 'Python 2.7', 'MongoDB', 'Flask', 'Pymongo', 'Boostrap', 'HTML', 'CSS', 'JS', 'ORM'],
     gitLink: 'https://github.com/EgbieAndersonUku1/myBlog',
     image: 'static/img/jpg/myBlog.jpeg',
     hasWebsite: false,
@@ -1137,7 +1143,8 @@ repository = {
         "Regression testing",
         "unit test",
         "Unit testing",
-        "White box testing"
+        "White box testing",
+        "ORM",
     ]
     
 
@@ -1176,7 +1183,8 @@ repository = {
         "Protection against attacks",
         "UI",
         "User-friendly interface",
-        "Web application"
+        "Web application",
+        "ORM"
     ]
     
 
