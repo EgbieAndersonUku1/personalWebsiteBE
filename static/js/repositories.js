@@ -43,6 +43,31 @@ repository = {
 
 addToRepository(repository);
 
+
+
+repository = {
+    name: 'Database Challeenge',
+    description: "Practise using the SQLite database to persist information for an Express app",
+    languages: ['SQlite', 'Node JS', "Express"],
+    gitLink: 'https://github.com/EgbieAndersonUku1/database-challenge',
+    image: 'static/img/jpg/sqlite.jpeg',
+    hasWebsite: false,
+    websiteUrl: '',
+    dateCreated: '2024-08-05',
+    indexed: "",
+    projectStatus: "InProgress",
+    tags: [
+        "Databases",
+        "Sqlite",
+        "Challenge",
+        "Persistance",
+        "app"
+    ]
+    
+
+};
+
+addToRepository(repository);
 repository = {
     name: 'Food restuarant',
     description: "This repository presents the development of a responsive restaurant website, crafted using HTML, CSS, JavaScript, and Node.js. Features include a dynamic menu, seamless booking system, captivating homepage, and convenient contact page.",
