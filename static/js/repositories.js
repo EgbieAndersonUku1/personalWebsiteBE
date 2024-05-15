@@ -46,7 +46,7 @@ addToRepository(repository);
 
 
 repository = {
-    name: 'Database Challeenge',
+    name: 'Database Challenge',
     description: "Practise using the SQLite database to persist information for an Express app",
     languages: ['SQlite', 'Node JS', "Express", "JS"],
     gitLink: 'https://github.com/EgbieAndersonUku1/database-challenge',
@@ -68,6 +68,35 @@ repository = {
 };
 
 addToRepository(repository);
+
+
+repository = {
+    name: 'Cryptography',
+    description: "This project aims to implement various classical ciphers and modern cryptographic techniques using Python and JavaScript. Each cipher will be implemented both as a class-based and function-based solution.",
+    languages: ['Python', 'JS', 'Node JS'],
+    gitLink: 'https://github.com/EgbieAndersonUku1/cryptography',
+    image: 'static/img/jpg/crypto.jpeg',
+    hasWebsite: false,
+    websiteUrl: '',
+    dateCreated: '2024-05-15',
+    indexed: "",
+    projectStatus: "InProgress",
+    tags: [
+        "Cryptography",
+        "cipher",
+        "ceaser",
+        "affine",
+        "RSA",
+        "reverse",
+        "encryption",
+        "decryption"
+    ]
+    
+
+};
+
+addToRepository(repository);
+
 repository = {
     name: 'Food restuarant',
     description: "This repository presents the development of a responsive restaurant website, crafted using HTML, CSS, JavaScript, and Node.js. Features include a dynamic menu, seamless booking system, captivating homepage, and convenient contact page.",
