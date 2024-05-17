@@ -53,7 +53,7 @@ repository = {
     image: 'static/img/jpg/sqlite.jpeg',
     hasWebsite: false,
     websiteUrl: '',
-    dateCreated: '2024-08-05',
+    dateCreated: '2024-05-08',
     indexed: "",
     projectStatus: "InProgress",
     tags: [
@@ -64,7 +64,30 @@ repository = {
         "app"
     ]
     
+};
 
+addToRepository(repository);
+
+
+repository = {
+    name: 'Fruit and veg store',
+    description: "An online store for fresh fruits, vegetables, and more. This project aims to provide a user-friendly shopping experience with features like product categories, search functionality, user accounts, and a responsive design",
+    languages: ['HTML', 'CSS'],
+    gitLink: 'https://github.com/EgbieAndersonUku1/fruit-and-veg-store',
+    image: 'static/img/jpg/fruit-n-veg.jpeg',
+    hasWebsite: true,
+    websiteUrl: 'https://egbieandersonuku1.github.io/fruit-and-veg-store/',
+    dateCreated: '2024-05-17',
+    indexed: "",
+    projectStatus: "InProgress",
+    tags: [
+        "Online",
+        "Fruit",
+        "Vegetables",
+        "organic",
+        "fresh"
+    ]
+    
 };
 
 addToRepository(repository);
