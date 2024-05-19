@@ -120,6 +120,32 @@ repository = {
 
 addToRepository(repository);
 
+
+
+
+repository = {
+    name: 'Adorable cats',
+    description: "A user-friendly webpage for viewing and adorable ats. Browse through a variety of cats, express your interest by liking them, and enjoy an interactive experience. ",
+    languages: ['HTML', 'CSS', 'JS', 'Node JS'],
+    gitLink: 'https://github.com/EgbieAndersonUku1/cuteCats',
+    image: 'static/img/jpg/cute-cats.jpeg',
+    hasWebsite: true,
+    websiteUrl: 'https://egbieandersonuku1.github.io/cuteCats/',
+    dateCreated: '2024-05-18',
+    indexed: "",
+    projectStatus: "InProgress",
+    tags: [
+       "cats",
+       "cute",
+       "cute cats",
+       "animals",
+       "frontend",
+    ]
+    
+};
+
+addToRepository(repository);
+
 repository = {
     name: 'Food restuarant',
     description: "This repository presents the development of a responsive restaurant website, crafted using HTML, CSS, JavaScript, and Node.js. Features include a dynamic menu, seamless booking system, captivating homepage, and convenient contact page.",
