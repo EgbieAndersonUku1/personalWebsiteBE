@@ -1,5 +1,4 @@
 const repositories = [];
-let repository = {};
 
 function addToRepository(repository) {
     repository.indexed = repositories.length - 1;
@@ -8,7 +7,8 @@ function addToRepository(repository) {
 
 }
 
-repository = {
+const listOfRepositories = [
+    {
     name: 'Portfolio',
     description: "My portfolio serves as a comprehensive showcase of all my GitHub projects. It provides a curated collection of my work, spanning various domains and demonstrating my skills and expertise in software development as well as the different programming language. Visitors can explore my projects to gain insight into my capabilities and contributions.",
     languages: ['JavaScript', 'HTML', 'CSS', 'Node JS'],
@@ -36,16 +36,7 @@ repository = {
         "contributions"
     ]
     
-    
-
-
-};
-
-addToRepository(repository);
-
-
-
-repository = {
+}, {
     name: 'Database Challenge',
     description: "Practise using the SQLite database to persist information for an Express app",
     languages: ['SQlite', 'Node JS', "Express", "JS"],
@@ -64,12 +55,7 @@ repository = {
         "app"
     ]
     
-};
-
-addToRepository(repository);
-
-
-repository = {
+}, {
     name: 'Fruit and veg store',
     description: "An online store for fresh fruits, vegetables, and more. This project aims to provide a user-friendly shopping experience with features like product categories, search functionality, user accounts, and a responsive design",
     languages: ['HTML', 'CSS'],
@@ -88,12 +74,7 @@ repository = {
         "fresh"
     ]
     
-};
-
-addToRepository(repository);
-
-
-repository = {
+}, {
     name: 'Cryptography',
     description: "This project aims to implement various classical ciphers and modern cryptographic techniques using Python and JavaScript. Each cipher will be implemented both as a class-based and function-based solution.",
     languages: ['Python', 'JS', 'Node JS'],
@@ -116,14 +97,7 @@ repository = {
     ]
     
 
-};
-
-addToRepository(repository);
-
-
-
-
-repository = {
+}, {
     name: 'Adorable cats',
     description: "A user-friendly webpage for viewing and adorable ats. Browse through a variety of cats, express your interest by liking them, and enjoy an interactive experience. ",
     languages: ['HTML', 'CSS', 'JS', 'Node JS'],
@@ -142,11 +116,7 @@ repository = {
        "frontend",
     ]
     
-};
-
-addToRepository(repository);
-
-repository = {
+}, {
     name: 'Food restuarant',
     description: "This repository presents the development of a responsive restaurant website, crafted using HTML, CSS, JavaScript, and Node.js. Features include a dynamic menu, seamless booking system, captivating homepage, and convenient contact page.",
     languages: ['JavaScript', 'HTML', 'CSS', 'Node JS'],
@@ -170,11 +140,7 @@ repository = {
         "table booking"
     ]
 
-};
-
-addToRepository(repository);
-
-repository = {
+}, {
     name: 'Meetup clone',
     description: "This is a Meetup clone that attempts to replicate the original meetup a web application designed to facilitate organizing and attending events within communities. This clone has none of the functionality of the original like allowing users to create, browse, and join events based on their interests and location. This clone only aims to replicate visual aspect of the popular Meetup platform not the core functionality.",
     languages: ['HTML', 'CSS', 'JS', 'Node JS'],
@@ -207,11 +173,7 @@ repository = {
     ]
     
 
-};
-
-addToRepository(repository);
-
-repository = {
+}, {
     name: 'Quantum Innovation Agency website',
     description: "This agency website showcases an 'About', 'Meet the team' section, providing insights into the agency's mission, values, and team members. It also features a 'Testimonials' page, highlighting client feedback and success stories. Additionally, there's a 'Contacts' page offering various means of communication for potential clients and partners as well as allowing the user to get a quote",
     languages: ['HTML', 'CSS', 'JS', 'Node JS'],
@@ -243,11 +205,7 @@ repository = {
         "frontend"
     ]
     
-};
-
-addToRepository(repository);
-
-repository = {
+}, {
     name: 'Chatgpt Clone',
     description: "A ChatGPT clone designed to emulate the acclaimed conversational prowess of OpenAI's technology. Users can seamlessly engage in dialogue, asking questions and receiving insightful response as well as seen their entire chat history",
     languages: ['HTML', 'CSS', 'JS', 'Node JS', 'Fetch API', 'API'],
@@ -275,12 +233,7 @@ repository = {
         "QA",
     ]
     
-};
-
-addToRepository(repository);
-
-
-repository = {
+}, {
     name: 'Movie App',
     description: "The Movie App is a web application that operates a little like IMBD but except on a much smaller scale. The application allows the user to add a movie, series, etc to the application along with the title, description, cast, rating, length of the movie and the year it was made. Once added the user of the application can view the movie or delete the movie. The site also has a simple authentication",
     languages: ['HTML', 'CSS', 'JS', 'Node JS'],
@@ -314,13 +267,7 @@ repository = {
         "Web application"
     ]
     
-};
-
-addToRepository(repository);
-
-
-
-repository = {
+}, {
     name: 'Dogstram',
     description: "Dogstagram, a static website project showcasing a replication of the Instagram frontend with a focus on our furry friends. ",
     languages: ['HTML', 'CSS', 'Node JS'],
@@ -346,12 +293,7 @@ repository = {
         "static"
     ]
     
-};
-
-addToRepository(repository);
-
-
-repository = {
+}, {
     name: 'Rock Paper and Scissor',
     description: "This is a simple implementation of the classic Rock Paper Scissors game in JavaScript. The game allows users to play against a computer or another player. Players can choose between rock, paper, or scissors, and the winner is determined based on the rules of the game.",
     languages: ['HTML', 'CSS', 'JS', 'Node JS'],
@@ -380,13 +322,7 @@ repository = {
         "single player"
     ]
     
-};
-addToRepository(repository);
-
-
-
-
-repository = {
+}, {
     name: 'Food market Vendor App',
     description: "FoodMarketVendor Website: A Django-based project for food vendors to manage menus, orders, and interactions with customers.",
     languages: ['Django', 'Python', 'Python 3.12.3', 'HTML', 'CSS', 'Node JS'],
@@ -413,10 +349,7 @@ repository = {
     ]
     
     
-};
-addToRepository(repository);
-
-repository = {
+}, {
     name: 'Hobby Site',
     description: "A simple site displaying my personal hobbies",
     languages: ['HTML', 'CSS', 'JS', 'Node JS'],
@@ -442,12 +375,7 @@ repository = {
         "showcase",
     ]
     
-};
-addToRepository(repository);
-
-
-
-repository = {
+}, {
     name: 'CleverMovies',
     description: "CleverMovies is a dynamic web application that fetches movie and TV series data from an external API and provides a personalized experience for users. With CleverMovies, you can browse through a vast collection of titles, search for specific movies or TV series, and even track your favourites. The website has also has a login and registration page for authentication along with a custom cache",
     languages: ['HTML', 'CSS', 'JS', 'Node JS', 'Express', 'Fetch API', 'API'],
@@ -484,13 +412,7 @@ repository = {
     ]
     
     
-};
-addToRepository(repository);
-
-
-
-
-repository = {
+}, {
     name: 'DiscordBot',
     description: "A versatile Discord bot, adept at managing various server tasks like sending direct messages, moderating, and more. Empowered by OpenAI's natural language processing, it facilitates seamless interaction, allowing users to inquire and receive responses effortlessly. In addition, it also announces when a user joins or leaves the server, monitors foul language and acts accordingly in order to foster a friendly environment",
     languages: ['HTML', 'CSS', 'JS', 'Node JS', 'Fetch API', 'OpenAPI', 'API', 'Discordjs', 'Sinon'],
@@ -521,10 +443,7 @@ repository = {
     
     
     
-};
-addToRepository(repository);
-
-repository = {
+}, {
     name: 'Superstore',
     description: "This is a website store simulation I developed, offering users the ability to replicate the functionality of any online web store. Users can browse, add items to their basket, update or delete basket items, and checkout with chosen payment methods. Admin privileges are required to manage the store's database, facilitated through an accessible admin dashboard showcasing crucial metrics like item stock and customer orders. Note: This is a demonstration store, with no real monetary transactions. Product images sourced from Topshop and NeXT website",
     languages: ['Python 3.6', 'Flask', 'Bootstrap', 'Sqlite3', 'SQLAlchemy', 'HTML', 'CSS', 'ORM'],
@@ -563,11 +482,7 @@ repository = {
     ]
     
     
-};
-addToRepository(repository);
-
-
-repository = {
+}, {
     name: 'Virtual vending maching',
     description: "A Python-based Command Line Interface (CLI) for a virtual vending machine. It efficiently tracks stock items including 'Item ID', 'Price', 'Quantity', and 'Item Name'. Additionally, the vending machine provides transaction receipts and offers distinct menus for both employees and students",
     languages: ['Python 3.6', 'Python'],
@@ -602,11 +517,7 @@ repository = {
             ]
 
     
-};
-addToRepository(repository);
-
-
-repository = {
+}, {
     name: 'Job Journal Tracker',
     description: "JobJournalTracker is a comprehensive web-based application I developed, designed for freelancers, job seekers, contractors, and more. It streamlines job tracking, allowing users to effortlessly add, modify, view, or delete job entries. By consolidating job applications, interviews, and employer responses into one accessible platform, it simplifies the job search process, akin to using a password manager for multiple accounts.",
     languages: ['Python 3.6', 'Flask', 'Flask-SQLAlchemy', 'HTML', 'CSS', 'Python', 'ORM'],
@@ -652,12 +563,7 @@ repository = {
         "ORM",
     ]
     
-};
-addToRepository(repository);
-
-
-
-repository = {
+}, {
     name: 'Blogger Application',
     description: "A robust blogging application complete with authentication features like registration and login. Users can create posts, define categories, and enjoy all the essential features expected from a modern blog platform",
     languages: ['Python 3.6', 'Flask', 'Flask-SQLAlchemy', 'HTML', 'CSS', 'Python', 'ORM'],
@@ -686,11 +592,7 @@ repository = {
         "ORM"
     ]
     
-};
-addToRepository(repository);
-
-
-repository = {
+}, {
     name: 'Social Network Application',
     description: "This is a social network application. It allows the user to create a profile, login, edit their profile, adding profile images, add friends, block users, post or delete messages, change or reset passwords and much much more.",
     languages: ['Python 3.6', 'Flask', 'Flask-SQLAlchemy', 'HTML', 'CSS', 'Python', 'ORM'],
@@ -724,11 +626,7 @@ repository = {
         "ORM"
     ]
     
-};
-addToRepository(repository);
-
-
-repository = {
+}, {
     name: 'Forum',
     description: "A user-friendly thread platform featuring authentication functionalities such as registration, login, and password management. Users can create threads and engage in discussions by posting replies, fostering interactive communication within the platform",
     languages: ['Python 3.6', 'Flask', 'Flask-SQLAlchemy', 'HTML', 'CSS', 'python', 'ORM'],
@@ -761,12 +659,7 @@ repository = {
         "ORM"
     ]
     
-};
-addToRepository(repository);
-
-
-
-repository = {
+}, {
     name: 'Linux Based File Encryptor',
     description: "A Linux-based command-line interface (CLI) program capable of encrypting and decrypting files. This tool enhances file security by providing encryption functionality directly from the command line, offering users a seamless solution for protecting their data",
     languages: ['Python'],
@@ -793,12 +686,7 @@ repository = {
         "Seamless solution"
     ]
     
-};
-addToRepository(repository);
-
-
-
-repository = {
+}, {
     name: 'Bill/Flatmate Calculator',
     description: "A simple application that calculates each flatmate's share of the bill based on the number of days they stayed in the house for a given month. This tool simplifies expense management by accurately dividing costs among occupants, promoting fairness and transparency in shared living arrangements and then writes them to a PDF file",
     languages: ['Python'],
@@ -823,11 +711,7 @@ repository = {
         "Transparency promotion"
     ]
     
-};
-addToRepository(repository);
-
-
-repository = {
+}, {
     name: 'Web scrapper',
     description: "BooksToScrapePage is a Python 3+ scraper tool designed to extract data from the (http://books.toscrape.com/) website. It retrieves the menu category and details of books from the first page, including title, UPC, price, image, tax, and more. This convenient tool enables users to practice web scraping in any programming language",
     languages: ['Python', 'BeautifulSoup', 'Python 3.5'],
@@ -859,11 +743,7 @@ repository = {
         "books"
     ]
     
-};
-addToRepository(repository);
-
-
-repository = {
+}, {
     name: 'Simple dictionary',
     description: "A simple straightforward dictionary app using where users can input any word and instantly view its meaning. This minimalistic yet functional application provides a seamless experience for exploring word definitions.",
     languages: ['Python', 'Python 3.5', 'Flask', 'HTML', 'CSS', 'Bootstrap'],
@@ -889,11 +769,7 @@ repository = {
         "word definitions"
     ]
     
-};
-addToRepository(repository);
-
-
-repository = {
+}, {
     name: 'Pwitter',
     description: "A website store that mirrors some of Twitter's features. Users can post, edit, and delete tweets, as well as follow and unfollow other users. Once signed up, they can view tweets from users they follow, creating a dynamic and interactive platform reminiscent of Twitter's functionality",
     languages: ['Python', 'Python 3.5', 'Flask', 'SQLAlchemy', 'HTML', 'CSS', 'Bootstrap', 'ORM'],
@@ -921,12 +797,10 @@ repository = {
         "unfollow",
         "ORM"
     ]
-    };
-
-addToRepository(repository);
+    },
 
 
-repository = {
+ {
     name: 'Solve User Questions with Answers',
     description: "This project is a website enabling users to ask questions to a panel of experts post-registration. Users can direct questions to specific experts, who can then log in to view and respond. The platform includes three main account types: Admin, Expert, and Regular User, each with distinct privileges and capabilities. Admins have additional privileges, such as creating and managing user accounts, viewing user details, and deactivating/reactivating accounts. Experts can only answer questions directed at them, while Regular Users can ask questions and select experts to answer them. All account types can change their passwords for security purposes",
     languages: ['Python', 'Python 3.5', 'Flask', 'Sqlite3', 'HTML', 'CSS', 'Bootstrap'],
@@ -960,13 +834,11 @@ repository = {
         "User account management"
     ]
     
-};
-
-addToRepository(repository);
+},
 
 
 
-repository = {
+ {
     name: 'BlockChain',
     description: "A simple blockchain from scratch, complete with a sleek GUI built using Flask. This blockchain will encompass all typical blockchain functionalities, such as connecting to nodes, mining blocks, receiving rewards, and conducting transactions. Through this endeavor, I aim to demonstrate the core principles and capabilities of blockchain technology",
     languages: ['Python', 'Python 3.5', 'Flask', 'HTML', 'CSS', 'Bootstrap'],
@@ -998,11 +870,10 @@ repository = {
         "UI"
     ]
     
-};
-addToRepository(repository);
+},
 
 
-repository = {
+ {
     name: 'Candidate Skill Selector',
     description: "A minimalist web page utilizing JavaScript, HTML, and CSS, empowering users to select candidates based on their skills. This intuitive interface provides a seamless experience for evaluating and filtering candidates according to specific skill sets",
     languages: ['HTML', 'CSS', 'JS'],
@@ -1025,11 +896,10 @@ repository = {
         "Specific skill sets"
     ]
     
-};
-addToRepository(repository);
+},
 
 
-repository = {
+ {
     name: 'Amazon Buyer Automation tester',
     description: "An automation program written in Python specifically tailored for Amazon tasks. The program navigates to the Amazon website and executes various actions, including adding specific books to the basket, saving one for later, deleting another, adjusting quantities, marking orders as gifts, and removing items from the basket. This streamlined tool enhances efficiency in managing Amazon orders and preferences",
     languages: ['Python', 'Behave', 'Selenium', 'Chrome'],
@@ -1057,10 +927,9 @@ repository = {
     ]
     
     
-};
-addToRepository(repository);
+},
 
-repository = {
+ {
     name: 'World Best App Test',
     description: "A technical test where I implemented a series of automation tests to evaluate a provided website. These tests covered various functionalities and scenarios to ensure the website's robustness and reliability. By meticulously designing and executing these tests, I demonstrated my proficiency in automated testing and thoroughness in ensuring software quality.",
     languages: ['Python', 'Behave', 'Selenium', 'Chrome', 'Gherkins'],
@@ -1091,11 +960,10 @@ repository = {
         "Website"
     ]
     
-};
-addToRepository(repository);
+},
 
 
-repository = {
+ {
     name: 'MaCChanger',
     description: "MaCChanger is a command-line program designed to enable users to change their current MAC address to their desired MAC address. While primarily intended for command-line use, users have the flexibility to utilize the program in any manner they see fit",
     languages: ['Python'],
@@ -1117,11 +985,10 @@ repository = {
         "MaCChanger"
     ]
     
-};
-addToRepository(repository);
+},
 
 
-repository = {
+ {
     name: 'Price alerter',
     description: "Price Alerter is an online web-based application enabling users to track prices of items from various online stores. Users can create store profiles and specify items to monitor. The app notifies users via email of any price changes for the tracked items. Predefined stores include Ebay, Amazon, and Game, offering users flexibility in tracking their desired products",
     languages: ['Python', 'Python 3.6', 'MongoEngine', 'Mailgun API', 'Flask', 'HTML', 'CSS'],
@@ -1152,12 +1019,11 @@ repository = {
     ]
     
 
-};
-addToRepository(repository);
+},
 
 
 
-repository = {
+ {
     name: 'The Moodle Project',
     description: "A framework built from scratch using Python Selenium, a powerful tool for automating website testing. This framework will specifically target testing functionalities of a Moodle application. Once completed, it will perform various tests, including user login, self-enrollment to courses, badge awards, and more. Rather than writing individual test scripts for each case, I'm building a framework to maintain flexibility and prevent test breakages due to UI changes. This approach allows for easier adaptation to UI modifications without rewriting test logic, reflecting my commitment to efficiency and adaptability in testing environments.",
     languages: ['Python', 'Python 2.7'],
@@ -1186,11 +1052,10 @@ repository = {
     ]
     
 
-};
-addToRepository(repository);
+},
 
 
-repository = {
+ {
     name: 'My Blog',
     description: "I successfully built a fully functional blog with an admin section. Users can create multiple blogs, each with its own commenting and reply section. The admin interface, designed with Bootstrap, allows for easy management of the blog. Additionally, I implemented a comprehensive testing strategy, including automatic, unit, manual, regression, exploration, black box, and white box testing, ensuring the reliability and robustness of the application.",
     languages: ['Python', 'Python 2.7', 'MongoDB', 'Flask', 'Pymongo', 'Boostrap', 'HTML', 'CSS', 'JS', 'ORM'],
@@ -1226,11 +1091,10 @@ repository = {
     ]
     
 
-};
-addToRepository(repository);
+},
 
 
-repository = {
+ {
     name: 'Job Diary',
     description: "Job Diary is a web application designed to track job-related expenses and details, addressing the limitations of using Excel for this purpose. It provides a user-friendly interface to record job locations, pay, and other relevant information. Leveraging Flask implementation for enhanced security, it offers protection against attacks like Cross Site attack. Utilizing CDN Bootstrap, the application boasts a polished interface for easy navigation and accessibility.",
     languages: ['Python', 'Python 2.7', 'Flask', 'Pymongo (ORM)', 'Boostrap', 'HTML', 'CSS'],
@@ -1266,11 +1130,10 @@ repository = {
     ]
     
 
-};
-addToRepository(repository);
+},
 
 
-repository = {
+ {
     name: 'Gmailer',
     description: "This script enables Gmail account owners to send emails from one account to another. To utilize the script, users must disable the 'less secure apps' setting in their Gmail account. With this simple tool, users can easily manage email communications between accounts",
     languages: ['Python', 'Python 2.7'],
@@ -1293,11 +1156,10 @@ repository = {
     ]
     
 
-};
-addToRepository(repository);
+},
 
 
-repository = {
+ {
     name: 'A simple web blog',
     description: "This is a basic web blog utilizing MongoDB for data storage. It lacks robust security measures, such as user authentication and password encryption, and may not handle errors properly. Additionally, it does not verify the uniqueness of usernames and lacks features like post deletion. Despite its simplicity, it still works and behaves as a blog.",
     languages: ['Python', 'Python 2.7'],
@@ -1318,12 +1180,11 @@ repository = {
         "web blog"
     ]
     
-};
-addToRepository(repository);
+},
 
 
 
-repository = {
+ {
     name: 'Multiple File unzipper',
     description: "This script is designed to unzip multiple zip files from a specified directory. It efficiently extracts the contents of each zip file, streamlining the process of managing and accessing compressed files.",
     languages: ['Python', 'Python 2.7'],
@@ -1346,13 +1207,11 @@ repository = {
         "zip"
     ]
     
-};
-
-addToRepository(repository);
+},
 
 
 
-repository = {
+ {
     name: '2048 game',
     description: "TThis project is a simple clone of the original 2048 game. Players can enjoy the addictive gameplay of merging tiles to reach the elusive 2048 tile. With intuitive controls and minimalist design, it faithfully recreates the experience of the classic puzzle game",
     languages: ['Python', 'Python 2.7'],
@@ -1375,13 +1234,10 @@ repository = {
     ]
     
 
-};
-
-addToRepository(repository);
+},
 
 
-
-repository = {
+ {
     name: 'Linux IP Address changer',
     description: "A utility for changing IP address configurations between dynamic and static modes in Linux. Users can toggle between these modes through a simple interface. The tool streamlines the process of managing network configurations, providing flexibility and convenience for users adjusting their IP settings",
     languages: ['Python', 'Python 2.7'],
@@ -1411,14 +1267,11 @@ repository = {
     ]
     
 
-};
-
-addToRepository(repository);
+},
 
 
 
-
-repository = {
+ {
     name: 'Tidier',
     description: "This program aims to organize cluttered directories by sorting files into folders based on their creation date and file extension. Users can opt for a recursive tidying option to clean up subdirectories as well",
     languages: ['Python', 'Python 2.7'],
@@ -1450,9 +1303,7 @@ repository = {
         "tidier"
     ]
     
-};
-
-repository = {
+}, {
     name: 'Password Generator',
     description: "This program generates random passwords with lengths ranging from 3 to 22 characters, along with a corresponding pass phrase to aid in remembering the password. The pass phrase is formed by using the first characters of each word, representing the characters of the password. This tool offers a convenient method for creating secure passwords and remembering them effectively.",
     languages: ['Python', 'Python 2.7'],
@@ -1475,10 +1326,7 @@ repository = {
     ]
     
 
-};
-
-
-repository = {
+}, {
     name: 'Hangman',
     description: "This project is a unique twist on the classic hangman game, where players guess letters to uncover a hidden word or phrase. Unlike traditional hangman games, there is no hanging man illustration. Players focus solely on guessing the word within a certain number of attempts. This unconventional approach adds an interesting twist to the familiar gameplay experience",
     languages: ['Python', 'Python 2.7'],
@@ -1500,10 +1348,9 @@ repository = {
     ]
     
 
-};
+},
 
-
-repository = {
+ {
     name: 'Script Writer',
     description: "This script automates the process of adding essential information to the top of a file or script. Upon execution, it inserts a title, shebang, author details, file or script information, and creation timestamp to the top of the file. This streamlined tool enhances file organization and documentation, saving time and effort for users",
     languages: ['Python', 'Python 2.7'],
@@ -1527,10 +1374,8 @@ repository = {
     ]
     
 
-};
-
-
-repository = {
+},
+{
     name: 'Binary Converter',
     description: "This program allows users to enter text and choose between converting it to binary or decoding it into text. A menu prompts the user to select their desired conversion option, providing flexibility in manipulating text data. With this simple tool, users can easily encode and decode text according to their preferences",
     languages: ['Python', 'Python 2.7'],
@@ -1552,11 +1397,13 @@ repository = {
         "User preferences"
     ]
     
-};
+}
 
+]
 
+listOfRepositories.forEach(repository => {
+    repositories.push(repository)
+})
 
-
-addToRepository(repository);
 
 export default repositories
