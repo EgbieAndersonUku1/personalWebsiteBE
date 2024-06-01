@@ -1402,7 +1402,7 @@ const listOfRepositories = [
 ]
 
 listOfRepositories.forEach(repository => {
-    repositories.push(repository)
+   addToRepository(repository)
 })
 
 
