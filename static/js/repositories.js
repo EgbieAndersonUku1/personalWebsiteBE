@@ -1397,6 +1397,46 @@ const listOfRepositories = [
         "User preferences"
     ]
     
+},{
+    name: 'AmazinQuiz App',
+    description: "This repository houses the codebase for the Amazin’ Quizzer App, featuring a RESTful API for quiz generation, question management, and adaptive difficulty",
+    languages: ['JavaScript', 'HTML', 'CSS', 'Node JS'],
+    gitLink: 'https://github.com/EgbieAndersonUku1/amazinQuizApp',
+    image: 'static/img/jpg/QA.jpg',
+    hasWebsite: false,
+    websiteUrl: '',
+    dateCreated: '2024-06-13',
+    indexed: "",
+    projectStatus: "InProgress",
+    tags: [
+        "Quiz",
+        "Questions",
+        "Categories",
+        "knowledge",
+        "frontend",
+        "backend",
+        "Trivia",
+        "Knowledge",
+        "Quiz",
+        "Educational",
+        "Fun",
+        "Brain Teasers",
+        "Multiple Choice",
+        "Test Your Knowledge",
+        "Learning",
+        "Challenge",
+        "Interactive",
+        "Game",
+        "Trivia Questions",
+        "Entertainment",
+        "General Knowledge",
+        "Quiz Game",
+        "Educational Game",
+        "Questions and Answers",
+        "IQ Test",
+        "Facts",
+    ]
+    
 }
 
 ]
