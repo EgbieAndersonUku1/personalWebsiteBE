@@ -214,9 +214,8 @@
   - [ ] Test POST endpoints
 
 ## Frontend Integration
-- [ ] Set up a CSS framework (e.g., Bootstrap)
 - [ ] Add JavaScript for interactive elements
-- [ ] Integrate dynamic search using JavaScript or AJAX
+- [ ] Integrate dynamic search using JavaScript fetch
 - [ ] Add responsive design for mobile and desktop
 
 
