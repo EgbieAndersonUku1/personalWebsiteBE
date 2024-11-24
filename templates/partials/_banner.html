@@ -1,0 +1,8 @@
+
+
+<div class="banner" {% if class %} {{ class }}{% endif %}>
+    {% if content %}
+        <p>{{ content }}</p>
+    {% endif %}
+    {% block additional_content %}{% endblock %}
+</div>

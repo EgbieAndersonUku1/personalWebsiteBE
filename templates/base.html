@@ -1,0 +1,32 @@
+{% load static %}
+
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'css/css.css' %}">
+        <link rel="shortcut icon" href="{% static '/img/main-bg.pn' %}" type="image/x-icon">
+        <link rel="shortcut icon" href="{% static '/img/home-outline.svg' %}" type="image/x-icon">
+        <link rel="shortcut icon" href="{% static '/img/png/computers-33039_1920.png' %}" type="image/x-icon">
+        <title>{% block title %}{% endblock title %}</title>
+
+    </head>
+
+    <body>
+        <!-- The navigation section -->
+        {% block body %}{% endblock body %}
+
+        <!-- Spinner  -->
+        {% include "partials/_spinner.html" %}
+
+        <!-- The footer -->
+        {% include "partials/_footer.html" %}
+    
+        <!-- The scripts -->
+        {% block script %}{% endblock script %}
+    
+    </body>
+
+</html>

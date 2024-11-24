@@ -1,0 +1,39 @@
+{% load static %}
+
+<section id="hobbies">
+    <div class="container">
+
+        {% if questions %}
+            <div class="header">
+                <p class="title">Hobbies and other interests</p>
+            </div>
+
+            <div class="questions">
+                {% for question in questions %}
+
+                    <div class="question">
+                        <div class="question-container flex-space-between ">
+                            <a class="question-link">Do you have any hobbies and interest?</a>
+                            <img src="{% static '/img/icons/svg/caret-right.svg' %}" alt="The caret down sign" class="caret-down">
+                        </div>
+
+                        <div class="answer-container">
+                            <p class="answer">
+                                When I am not coding, I enjoy the great outdoors, taking walks. I also enjoy watching
+                                films and reading books
+                                that help improve my mindset and skills. My favorite book is <em>Think Like a Monk:
+                                    Train Your Mind for Peace and Purpose Every Day</em> by Jay Shetty, which focuses on
+                                training the mind.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                {% endfor %}
+            </div>
+            
+        {% endif %}
+
+    </div>
+</section>

@@ -1,0 +1,90 @@
+<section id="projects" aria-label="Projects">
+
+    <h1 class="center padding-bottom-sm padding-top-lg">Projects</h1>
+    <div class="js-project">
+        <div class="cards" aria-label="Projects">
+            {% for card in cards %}
+                <div class="card">
+                    <div class="head">
+                        <img src="static/img/png/movie-api.png" alt="Movie API Image">
+                    </div>
+
+                    <div class="body">
+                        <div class="about-project">
+                            <h1 class="padding-bottom-xsm">Clever movies</h1>
+                            <p>CleverMovies is a dynamic web application that fetches movie and TV series data from
+                                an external API and provides a personalized experience for users. With CleverMovies,
+                                you can browse through a vast collection of titles, search for specific movies or TV
+                                series, and even track your favorites. The website has also has a login and
+                                registration page for authentication along with a custom cache.</p>
+                        </div>
+
+                        <div class="footer">
+                            <h1 class="padding-top-xsm">Technologies Used</h1>
+                            <ul class="ul-technologies padding-bottom-xsm">
+                                <li>JS</li>
+                                <li>Node JS</li>
+                                <li>EJS</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>Github</li>
+                                <li>Fetch API</li>
+                            </ul>
+                            <div class="view">
+                                <div class="buttons">
+                                    <a href="https://github.com/fac30/api-project--egbie-ollie" target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="button-md view-repo green-bg color-white">View Github code repo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" aria-label="Discord Bot Project">
+                    <div class="head">
+                        <img src="static/img/icons/svg/bot.svg" alt="Discord Bot Image" class="bot-img">
+                    </div>
+
+                    <div class="body">
+                        <div class="about-project">
+                            <h1 class="padding-bottom-xsm">Discord Bot</h1>
+                            <p>
+                                A versatile Discord bot, adept at managing various server tasks like sending direct
+                                messages, moderating, and more. Empowered by OpenAI's natural language processing,
+                                it facilitates seamless interaction, allowing users to inquire and receive responses
+                                effortlessly. In addition, it also announces when a user joins or leaves the server,
+                                monitors foul language and acts accordingly in order to foster a friendly
+                                environment.
+                            </p>
+                        </div>
+
+                        <div class="footer">
+                            <h1 class="padding-top-xsm">Technologies Used</h1>
+                            <ul class="ul-technologies padding-bottom-xsm">
+                                <li>JS</li>
+                                <li>DiscordJS</li>
+                                <li>Node JS</li>
+                                <li>Github</li>
+                                <li>Fetch API</li>
+                                <li>OpenAPI</li>
+                            </ul>
+                            <div class="view">
+                                <div class="buttons">
+                                    <a href="https://github.com/fac30/discord-chatbot-emma-egbie" target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="button-md view-repo green-bg color-white">View Github code repo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            {% endfor %}
+        </div>
+
+        <div class="button center padding-top-md">
+            <a href="" class="view-more-btn green-bg color-white">View more</a>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Faq Page{% endblock title %}
+
+{% block body %}
+
+{% include "partials/headers/_faq_header.html" %}
+
+<main>
+
+    <!-- The call to action for the FAQ -->
+    <section id="FAQ" aria-labelledby="faq-heading">
+        <div class="container">
+            <img src="static/img/png/FAQ.png" alt="The FAQ image" class="FAQ-main-image" aria-hidden="true">
+            <h2 id="faq-heading" class="sr-only">Frequently Asked Questions</h2>
+        </div>
+    </section>
+
+    <!-- The general information section -->
+    {% include "partials/faq/_general_information.html" %}
+
+    <!-- The technically skills section -->
+    {% include "partials/faq/_technical_skills.html" %}
+
+    <!-- The contact section -->
+    {% include "partials/faq/_contact.html" %}
+
+
+
+</main>
+
+{% endblock body %}
+
+
+{% block script %}
+<script src="{% static '/js/faq.js' %}" type="module"></script>
+{% endblock script %}

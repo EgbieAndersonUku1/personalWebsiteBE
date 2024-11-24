@@ -1,0 +1,33 @@
+{% load static %}
+
+<!-- The footer -->
+  <footer aria-label="Footer">
+    <div class="container">
+
+        <div class="socials">
+            <div class="header">
+                <p class="footer-link-title">Socials</p>
+            </div>
+
+            <div class="links">
+                <a class="footer-link" aria-label="Gitlab"><img src="{% static '/img/icons/svg/gitlab (1).svg' %}"
+                        alt="Gitlab" class="footer-icon"></a>
+                <a href="#" class="footer-link" aria-label="Gmail"><img src="{% static 'img/icons/svg/gmail.svg' %}"
+                        alt="Gmail" class="footer-icon"></a>
+            </div>
+        </div>
+
+        <div class="faq">
+            <div class="header">
+                <p class="footer-link-title">FAQ</p>
+            </div>
+
+            <div class="links">
+                <a href="{% url 'faq' %}" class="footer-link">Learn more about me</a>
+            </div>
+        </div>
+
+       
+    </div>
+</footer>
+

@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block title %}Home Page{% endblock title %}
+
+{% block body %}
+
+    {% include "partials/headers/_home_header.html" %}
+
+    <main>
+        <!-- The call to action-->
+        {% include "partials/call_to_action/call_to_action.html" %}
+
+        <!-- The banner with text injection-->
+        {% include "partials/_banner.html" with content="Innovation Driven, Technology Focused" %}
+
+        <!-- The about me section -->
+        {% include "partials/about-me/_about-section.html" %}
+
+        <!-- The banner-->
+        {% include "partials/_banner.html" with content=None class="margin-bottom-sm" %}
+
+        <!-- The skills sections -->
+        {% include "partials/skills/_skills.html" %}
+
+        <!-- The banner -->
+        {% include "partials/_banner.html" with content="Innovation Driven, Technology Focused" %}
+
+        <!-- The projects section -->
+        {% include "partials/projects/_projects.html" %}
+
+        <!-- The banner -->
+        {% include "partials/_banner.html" with content="Harnessing Technology for Impact" %}
+
+        <!-- The project sidebar called when clicked-->
+        {% include "partials/_project-sidebar.html" %}
+
+        <!-- Search - The frameworks, languages that can be searched by the user -->
+        {% include "partials/_search.html" %}
+    
+    </main>
+
+{% endblock body %}
+
+
+{% block script %}
+
+    <script src="{% static 'js/script.js' %}" type="module"></script>
+    <script src="{% static 'js/buildProjectCards.js' %}" type="module"></script>
+    <script src="{% static 'js/search.js' %}" type="module"></script>
+
+{% endblock script %}
+
+
+
+
+
+
+
