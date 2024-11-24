@@ -5,7 +5,7 @@ Welcome to my portfolio website! This website showcases my projects and skills i
 
 ## Backend Integration for Easier Updates
 
-The site was originally built without a backend. However, as the project grew, updating content became a little tedious because I had to update it manually with text files and then commit the changes again. With the backend, updates will be a lot easier, allowing for more efficient content management.
+The site was originally built without a backend. However, if I add new project or want to update, it becomes ca little tedious because I have to update it manually with repo text file and then commit the changes again. With the backend, updates will be a lot easier, allowing for more efficient content management.
 
 
 ## Features
