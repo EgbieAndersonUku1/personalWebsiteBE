@@ -32,32 +32,32 @@ The site was originally built without a backend. However, as the project grew, u
 - **Tests**: I will also incorporate tests for the website to ensure robustness and functionality.
 
 
-# Clone the repository
+## Clone the repository
 git clone https://github.com/EgbieAndersonUku1/personalWebsiteBE.git
 
-# Navigate to the project folder
+## Navigate to the project folder
 cd personalWebsiteBE
 
-# (Optional) Create a virtual environment
+## (Optional) Create a virtual environment
 python3 -m venv venv  # Linux/macOS
-# or
+## or
 python -m venv venv  # Windows
 
-# Activate the virtual environment
+## Activate the virtual environment
 source venv/bin/activate  # Linux/macOS
-# or
+## or
 venv\Scripts\activate.ps1  # Windows
 
-# Install the required dependencies
+## Install the required dependencies
 pip install -r requirements.txt
 
-# Apply database migrations
+## Apply database migrations
 python manage.py migrate
 
-# (Optional) Create a superuser
+## (Optional) Create a superuser
 python manage.py createsuperuser
 
-# Run the development server
+## Run the development server
 python manage.py runserver
 
 ## You Can View My Projects by Clicking on the Link Below
