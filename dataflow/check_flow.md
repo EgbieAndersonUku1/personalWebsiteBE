@@ -46,64 +46,72 @@
     - [ ] CSS
     - [ ] JS
     - [ ] Bootstrap
-  - [ ] Backend Languages Choices (Checkbox)
-    - [ ] Python
-    - [ ] Express
-  - [ ] Frameworks Choices
-    - [ ] Express
-    - [ ] Django
-    - [ ] Flask
-  - [ ] Libraries Packages (Checkbox)
-    - [ ] Node JS
-    - [ ] Behave
-    - [ ] API
-    - [ ] BeautifulSoup
-    - [ ] Selenium
-    - [ ] Mongoengine
-    - [ ] ORM
-    - [ ] Chrome
-    - [ ] Pymongo
-    - [ ] Sinon
-    - [ ] Gherkins
-    - [ ] Sqlalchemy
+  - [ ] Backend_Languages  -> ManyToManYField (BackendLanguageModel)
+  - [ ] Frameworks         -> ManyToManyField (FrameworkModel)
+  - [ ] Libraries          -> ManyToManyField (LibrariesModel)
+  - [ ] Frontend_lang      -> ManyToManyField ( FrontendModel)
   - [ ] Has Website (choice)
     - [ ] Yes
     - [ ] No
     - [ ] Both
   - [ ] Created at
   - [ ] Modified at
-  - [ ] Relationships:
-    - [ ] User (ForeignKey)
-    - [ ] Skills (ForeignKey)
-    - [ ] FAQ (ForeignKey)
-    - [ ] About Me (ForeignKey)
-    - [ ] Tag (ManyToManyField)
-    - [ ] Website (URLField)
+  - [ ] GitHub (URLField) 
+  - [ ] Website (URLField)
+  - [ ] image (URLField)
   - [ ] Define property `get_technologies`:
     - [ ] Retrieve all skills
     - [ ] Return a list of skills
 
 - [ ] **FAQModel (model.Model)**
+  - [ ] User (ForeignKey)
   - [ ] Question
   - [ ] Answer
   - [ ] Created at
   - [ ] Modified at
 
 - [ ] **Skills (model.Model)**
+  - [ ] User (ForeignKey)
   - [ ] Name
   - [ ] Image
   - [ ] Modified at
   - [ ] Created on
 
 - [ ] **AboutModel (model.Model)**
+  - [ ] User (ForeignKey)
   - [ ] About
   - [ ] Created on
   - [ ] Modified on
 
 - [ ] **Tags (model.Model)**
+  - [ ] User (ForeignKey)
   - [ ] Tag
   - [ ] Modified at
   - [ ] Created at
+
+- [ ] BackendLanguageModel
+  - [ ] Name
+  - [ ] created on
+  - [ ] modeified
+
+
+- [ ] FrameworkModel
+  - [ ] Name
+  - [ ] created on
+  - [ ] modeified
+
+
+  - [ ] LibraryModel
+  - [ ] Name
+  - [ ] created on
+  - [ ] modeified
+
+
+  - [ ] FrontendModel
+  - [ ] Name
+  - [ ] created on
+  - [ ] modeified
+
 
 
 ## Remove original html files once the data has been added to the db

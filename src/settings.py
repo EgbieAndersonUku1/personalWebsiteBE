@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     'jazzmin',
     'home.apps.HomeConfig',
     'faq.apps.FaqConfig',
+    'project.apps.ProjectConfig',
     
     # third party apps
     'django.contrib.admin',
