@@ -19,7 +19,7 @@ class ProjectModel(models.Model):
     frontend_lang   = models.ManyToManyField("FrontEndLanguageModel", blank=True)
     backend_lang    = models.ManyToManyField("BackendLanguageModel", blank=True)
     framework       = models.ManyToManyField("FrameworkModel", blank=True)
-    libraries       = models.ManyToManyField("LibrariesModel", blank=True)
+    libraries       = models.ManyToManyField("LibraryModel", blank=True)
     have_website    = models.CharField(max_length=4,  choices=HaveWebsiteChoices.choices, default=HaveWebsiteChoices.NO)
     website_url     = models.URLField(max_length=255)
     github_url      = models.URLField(max_length=255)
@@ -57,10 +57,14 @@ class FrameworkModel(models.Model):
         return self.framework
 
 
-class LibrariesModel(models.Model):
+class LibraryModel(models.Model):
     library      = models.CharField(max_length=50, blank=True)
     created_on   = models.DateTimeField(auto_now_add=True)
     modified_on  = models.DateTimeField(auto_now=True)
+    
+    class Meta:
+        verbose_name        = "LibraryModel"
+        verbose_name_plural = "LibrariesModel"
 
     def __str__(self):
         return self.library

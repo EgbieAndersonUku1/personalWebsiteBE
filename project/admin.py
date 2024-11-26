@@ -1,5 +1,5 @@
 from django.contrib import admin
-from project.models import ProjectModel, FrontEndLanguageModel, FrameworkModel, BackendLanguageModel, LibrariesModel
+from project.models import ProjectModel, FrontEndLanguageModel, FrameworkModel, BackendLanguageModel, LibraryModel
 
 
 # Register your models here.
@@ -40,4 +40,4 @@ admin.site.register(ProjectModel, ProjectAdmin)
 admin.site.register(FrontEndLanguageModel, FrontEndLanguageAdmin)
 admin.site.register(BackendLanguageModel, BackendLanguageAdmin)
 admin.site.register(FrameworkModel, FrameworkAdmin)
-admin.site.register(LibrariesModel, LibrariesAdmin)
+admin.site.register(LibraryModel, LibrariesAdmin)
