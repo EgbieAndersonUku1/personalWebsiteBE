@@ -1,9 +1,8 @@
-import repositories from "./repositories.js";
 import   ProjectPaginator from "./utils/paginator.js";
 import   TypeAnimator     from "./utils/animatedText.js";
 import { SidebarToggler, showSpinner }            from "./utils/toggler.js";
 import { displayResults, handleButtonInteraction} from "./utils/buttonHandler.js";
-
+import  fetchData from "./utils/fetch.js";
 
 
 const TIME_IN_MILLISECONDS     = 3000;
@@ -25,7 +24,23 @@ const typeText          = new TypeAnimator();
 
 
 // Set the paginator attribute
-projectLoader.setProjectsRepo(repositories);
+async function getRepositories()  {
+    try {
+        const BASE_URL = window.location.origin;
+      
+        const url          = `${BASE_URL}/projects/`;
+        const repositories = await fetchData({url:url});
+        console.log(repositories.data);
+        projectLoader.setProjectsRepo(repositories.data);
+    } catch (error) {
+        throw new Error (`Something went wrong and the repositories couldn't be retrieved - ${error}`)
+    }
+}
+
+
+
+getRepositories();
+// console.log(repositories);
 
 
 // set the attributes for the class for the sidebar elements i.e search form and the sidebar
@@ -216,8 +231,6 @@ function toggleTextHelper(iconDivElement, textMenuItemElement = ".menu-item") {
         });
     });
 }
-
-
 
 
 

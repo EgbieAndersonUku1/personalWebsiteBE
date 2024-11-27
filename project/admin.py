@@ -8,13 +8,66 @@ class BaseLanguageAdmin(admin.ModelAdmin):
     list_filter         = ["created_on"]
     search_fields       = ["language"]
     list_display_links  = ["language"]
+    readonly_fields    = ["modified_on"]
+    
+   
     
     
 class ProjectAdmin(admin.ModelAdmin):
-    list_display      = ["id", "name", "created_on", "modified_on"]
-    filter_horizontal = ("frontend_lang", "backend_lang", "framework", "libraries")  
-     
-     
+    list_display       = ["id", "name", "created_on", "modified_on", "featured", "have_website", "progress_status"]
+    filter_horizontal  = ("frontend_lang", "backend_lang", "framework", "libraries")  
+    list_display_links = ["id", "name"]
+    list_per_page      = 30
+    readonly_fields    = ["modified_on"]
+    
+    fieldsets = [
+        (
+            None,
+            {
+                "fields": ["name", "description", "image"],
+            },
+        ),
+        (
+            "Languages",
+            {
+                "classes": ["collapse"],
+                "fields": ["frontend_lang", "backend_lang"],
+            },
+        ),
+        
+         (
+            "Frameworks",
+            {
+                "classes": ["collapse"],
+                "fields": ["framework"],
+            },
+        ),
+         
+        (
+            "Libraries",
+            {
+                "classes": ["collapse"],
+                "fields": ["libraries"],
+            },
+        ),
+        (
+            "Urls",
+            {
+                "classes": ["collapse"],
+                "fields": ["website_url", "github_url"],
+            },
+        ),
+        
+         (
+            "Additional information",
+            {
+                "classes": ["collapse"],
+                "fields": ["have_website", "progress_status", "created_on", "modified_on"],
+            },
+        ),
+    ]
+    
+    
 class FrontEndLanguageAdmin(BaseLanguageAdmin):
     pass
    
