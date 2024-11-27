@@ -220,13 +220,13 @@ function createWebsiteAnchorTag(repository) {
 
     visitSiteAnchorTag.classList.add("button-md", "view-repo", "primary-color", 
                                      "color-white", "card-btn", "has-site");
-  
+    
     switch(true) {
-        case repository.hasWebsite === true:
+        case repository.hasWebsite === "y":
             visitSiteAnchorTag.href        = repository.websiteUrl;
             visitSiteAnchorTag.textContent = "Visit site";
             break;
-        case repository.hasWebsite === false:
+        case repository.hasWebsite === "n":
             visitSiteAnchorTag.textContent = "No website available";
             visitSiteAnchorTag.classList.add("red-bg", "no-site");
     }
