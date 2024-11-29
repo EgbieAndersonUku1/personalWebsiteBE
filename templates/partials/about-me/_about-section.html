@@ -1,30 +1,8 @@
 <section id="about-me">
     <div class="container flex-col center">
-        <h1>About Me</h1>
-        <p>
-            Welcome to my software portfolio, a comprehensive showcase of my expertise and achievements in software development.
-             This portfolio features a diverse range of projects, including web applications and backend systems,
-              highlighting my proficiency in various technologies and tools.
-            
-        </p>
-        <p>
-            Throughout my portfolio, you'll find projects developed using languages such as Python, JavaScript, and others, 
-            along with frameworks like Express JS, Django and Flask as well as incoporating different languages into my projects
-            such as DiscordJS to name but a few. Leveraging modern development methodologies and best practices, 
-            each project demonstrates my ability to deliver high-quality solutions tailored to specific requirements.
-        </p>
-
-        <p>
-            From building interactive web interfaces with JavaScript frameworks to designing backend systems with Python
-             frameworks like Express JS, Django and Flask, my portfolio reflects my commitment to innovation and excellence in software development. 
-             Whether it's creating intuitive user experiences or optimizing performance and security, I strive to exceed expectations
-             and deliver tangible results.
-        </p>
-        <p>
-            As you explore my portfolio, I invite you to discover the depth of my skills and the value I can bring to your projects.
-             Whether you're a potential employer, client, or looking for a collaborator, I'm eager to discuss how my expertise can contribute to your success. 
-             Thank you for visiting, and I look forward to connecting with you soon
-        </p>
+        <h1>{{ about_me.title | title }}</h1>
+        
+        {{ about_me.about | safe }}
     </div>
 
 </section>
