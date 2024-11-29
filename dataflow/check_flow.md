@@ -37,31 +37,27 @@
 
 
 ## Create Models
-- [ ] **Project Model**
-  - [ ] Name
-  - [ ] Description (max length = 400)
-  - [ ] Project image
-  - [ ] FrontEndLanguages Choices (Checkbox)
-    - [ ] HTML
-    - [ ] CSS
-    - [ ] JS
-    - [ ] Bootstrap
-  - [ ] Backend_Languages  -> ManyToManYField (BackendLanguageModel)
-  - [ ] Frameworks         -> ManyToManyField (FrameworkModel)
-  - [ ] Libraries          -> ManyToManyField (LibrariesModel)
-  - [ ] Frontend_lang      -> ManyToManyField ( FrontendModel)
-  - [ ] Has Website (choice)
-    - [ ] Yes
-    - [ ] No
-    - [ ] Both
-  - [ ] Created at
-  - [ ] Modified at
-  - [ ] GitHub (URLField) 
-  - [ ] Website (URLField)
-  - [ ] image (URLField)
-  - [ ] Define property `get_technologies`:
-    - [ ] Retrieve all skills
-    - [ ] Return a list of skills
+- [X] **Project Model**
+  - [X] Name
+  - [X] Description (max length = 400)
+  - [X] Project image
+  - [X] FrontEndLanguages  -> ManyToManyField (FrontendLangModel)
+  - [X] Backend_Languages  -> ManyToManyField (BackendLanguageModel)
+  - [X] Frameworks         -> ManyToManyField (FrameworkModel)
+  - [X] Libraries          -> ManyToManyField (LibrariesModel)
+  - [X] Frontend_lang      -> ManyToManyField ( FrontendModel)
+  - [X] Has Website (choice)
+    - [X] Yes
+    - [X] No
+    - [X] Both
+  - [X] Created at
+  - [X] Modified at
+  - [X] GitHub (URLField) 
+  - [X] Website (URLField)
+  - [X] image (URLField)
+  - [X] Define property `get_technologies`:
+    - [X] Retrieve all skills
+    - [X] Return a list of skills
 
 - [ ] **FAQModel (model.Model)**
   - [ ] User (ForeignKey)
@@ -89,28 +85,28 @@
   - [ ] Modified at
   - [ ] Created at
 
-- [ ] BackendLanguageModel
-  - [ ] Name
-  - [ ] created on
-  - [ ] modeified
+- [X] BackendLanguageModel
+  - [X] Language
+  - [X] created on
+  - [X] modeified
 
 
-- [ ] FrameworkModel
-  - [ ] Name
-  - [ ] created on
-  - [ ] modeified
+- [X] FrameworkModel
+  - [X] Language
+  - [X] created on
+  - [X] modeified
 
 
-  - [ ] LibraryModel
-  - [ ] Name
-  - [ ] created on
-  - [ ] modeified
+  - [X] LibraryModel
+    - [X] library
+    - [X] created on
+    - [X] modeified
 
 
-  - [ ] FrontendModel
-  - [ ] Name
-  - [ ] created on
-  - [ ] modeified
+  - [X] FrontendModel
+    - [X] Name
+    - [X] created on
+    - [X] modeified
 
 
 
@@ -119,32 +115,34 @@
      - [ ] faq.html
      - [ ] index.html
 
-## Forms
-- [ ] **SearchForm (form.ModelAdmin)**
-  - [ ] Meta (exclude `created_at` and `modified_at`)
-  - [ ] Define filters for search fields (e.g., languages, frameworks)
-  - [ ] Keywords (Search by Keywords, separated by commas)
-  - [ ] Dates
-     - [ ] From date
-     - [ ] To date
-  - [ ] Result per page (range 1 to 10)
-  - [ ] Sort project by:
-    - [ ] Latest
-    - [ ] Oldest
-  - [ ] Project Status (choices)
-    - [ ] In Progress
-    - [ ] Completed
 
-- [ ] **AddProjectForm**
-  - [ ] Meta configuration
-  - [ ] Include necessary fields
-  - [ ] Validate file uploads (project image)
+## Forms
+- [X] **SearchForm (form.ModelAdmin)**
+  - [X] Meta (exclude `created_at` and `modified_at`)
+  - [X] Define filters for search fields (e.g., languages, frameworks)
+  - [X] Keywords (Search by Keywords, separated by commas)
+  - [X] Dates
+     - [X] From date
+     - [X] To date
+  - [X] Result per page (range 1 to 10)
+  - [X] Sort project by:
+    - [X] Latest
+    - [X] Oldest
+  - [X] Project Status (choices)
+    - [X] In Progress
+    - [X] Completed
+
+
+- [X] **AddProjectForm (admin interface)**
+  - [X] Meta configuration
+  - [X] Include necessary fields
+  - [X] Validate file uploads (project image)
 
 
 ## Views
 - [ ] **Templates**
-  - [ ] FAQ templates (separate page)
-  - [ ] Home templates (landing page)
+  - [X] FAQ templates (separate page)
+  - [X] Home templates (landing page)
   - [ ] Skills (list of available skills, technologies)
   - [ ] Search (integrated with form)
 
@@ -196,13 +194,14 @@
 ```
 
 ## API Points
+- [X] **GET**
+  - [X] `/project/search/`
+  - [X] `/project/home/`
+  - [X] `/project/`
+  - [X] `/project/FAQ/`
 - [ ] **GET**
-  - [ ] `/project/search/`
-  - [ ] `/project/home/`
-  - [ ] `/project/`
-- [ ] **POST**
   - [ ] `/project/search/` -> Returns JSON
-  - [ ] `/project/FAQ/`
+ 
 
 ## Unit and Integration Testing
 - [ ] Write unit tests for models
@@ -222,9 +221,9 @@
   - [ ] Test POST endpoints
 
 ## Frontend Integration
-- [ ] Add JavaScript for interactive elements
-- [ ] Integrate dynamic search using JavaScript fetch
-- [ ] Add responsive design for mobile and desktop
+- [X] Add JavaScript for interactive elements
+- [X] Integrate dynamic search using JavaScript fetch
+- [X] Add responsive design for mobile and desktop
 
 
 

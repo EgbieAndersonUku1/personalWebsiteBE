@@ -1,181 +1,123 @@
+<!-- The frameworks, languages that can be searched by the user -->
+<div id="search">
+    <div class="container">
+        <form method="post" class="search-form" aria-label="Project Search Form">
+            {% csrf_token %}
+            <!-- search by project name -->
+            <div class="box">
+                {{ search_form.name.label }}
+                {{ search_form.name }}
 
-    <!-- The frameworks, languages that can be searched by the user -->
-    <div id="search">
-        <div class="container">
-            <form method="post" class="search-form" aria-label="Project Search Form">
+            </div>
 
-                <!-- search by project name -->
-                <label for="name">Name</label>
-                <input type="text" name="name" id="name" placeholder="Search by name" maxlength="300">
-
-                <!-- search by languages -->
-                <div class="languages" aria-label="Programming Languages and Frameworks">
-                    <p>FrontEnd Languages</p>
-                    <div class="frontend-language grid-box" aria-label="FrontEnd Languages">
-                        <div class="box">
-                            <input type="checkbox" name="languages" value="html" id="html">
-                            <label for="html">HTML</label>
-                        </div>
-
-                        <div class="box">
-                            <input type="checkbox" name="languages" value="css" id="css">
-                            <label for="css">CSS</label>
-                        </div>
-
-                        <div class="box">
-                            <input type="checkbox" name="languages" value="javascript" id="javascript">
-                            <label for="javascript">JavaScript</label>
-                        </div>
-
-                        <div class="box">
-                            <input type="checkbox" name="languages" value="bootstrap" id="bootstrap">
-                            <label for="bootstrap">Bootstrap</label>
-                        </div>
+            <!-- search by languages -->
+            {% if search_form.frontend_lang %}
+            <div class="languages" aria-label="Programming Languages and Frameworks">
+                <p class="padding-top-xsm">FrontEnd Languages</p>
+                <div class="frontend-language grid-box" aria-label="FrontEnd Languages">
+                    {% for frontend_lang in search_form.frontend_lang %}
+                    <div class="box">
+                        {{ frontend_lang }}
                     </div>
 
-                    <p>BackEnd Languages</p>
-                    <div class="backend-language grid-box" aria-label="BackEnd Languages">
-                        <div class="box">
-                            <input type="checkbox" name="languages" value="python" id="python">
-                            <label for="python">Python</label>
-                        </div>
+                    {% endfor %}
+                </div>
+                {% endif %}
+
+                {% if search_form.backend_lang %}
+                <p class="padding-top-xsm">BackEnd Languages</p>
+                <div class="backend-language grid-box" aria-label="BackEnd Languages">
+                    {% for backend_lang in search_form.backend_lang %}
+                    <div class="box">
+                        {{ backend_lang }}
                     </div>
+                    {% endfor %}
 
-                    <p>Frameworks</p>
-                    <div class="backend-language grid-box" aria-label="Frameworks">
-                        <div class="box">
-                            <input type="checkbox" name="languages" value="express" id="express">
-                            <label for="express">Express JS</label>
-                        </div>
+                </div>
+                {% endif %}
 
-                        <div class="box">
-                            <input type="checkbox" name="languages" value="django" id="django">
-                            <label for="django">Django</label>
-                        </div>
+                {% if search_form.framework %}
+                <p class="padding-top-xsm">Frameworks</p>
+                <div class="backend-language grid-box" aria-label="Frameworks">
 
-                        <div class="box">
-                            <input type="checkbox" name="languages" value="flask" id="flask">
-                            <label for="flask">Flask</label>
-                        </div>
+                    {% for framework in search_form.framework %}
+                    <div class="box">
+                        {{ framework }}
                     </div>
+                    {% endfor %}
 
-                    <!-- search by other packages -->
-                    <p>Others / Libraries / Packages</p>
-                    <div class="backend-language grid-box" aria-label="Others / Libraries / Packages">
-                        <div class="box">
-                            <input type="checkbox" name="languages" value="node" id="node">
-                            <label for="node">Node JS</label>
-                        </div>
-                        <div class="box">
-                            <input type="checkbox" name="languages" value="BeautifulSoup" id="BeautifulSoup">
-                            <label for="BeautifulSoup">BeautifulSoup</label>
-                        </div>
-                        <div class="box">
-                            <input type="checkbox" name="languages" value="orm" id="orm">
-                            <label for="orm">ORM</label>
-                        </div>
-                        <div class="box">
-                            <input type="checkbox" name="languages" value="Sinon" id="Sinon">
-                            <label for="sinon">Sinon</label>
-                        </div>
-                        <div class="box">
-                            <input type="checkbox" name="languages" value="behave" id="behave">
-                            <label for="behave">Behave</label>
-                        </div>
-                        <div class="box">
-                            <input type="checkbox" name="languages" value="selenium" id="selenium">
-                            <label for="selenium">Selenium</label>
-                        </div>
-                        <div class="box">
-                            <input type="checkbox" name="languages" value="chrome" id="chrome">
-                            <label for="chrome">Chrome</label>
-                        </div>
-                        <div class="box">
-                            <input type="checkbox" name="languages" value="Gherkins" id="Gherkins">
-                            <label for="Gherkins">Gherkins</label>
-                        </div>
-                        <div class="box">
-                            <input type="checkbox" name="languages" value="API" id="API">
-                            <label for="API">API</label>
-                        </div>
-                        <div class="box">
-                            <input type="checkbox" name="languages" value="mongoengine" id="mongoengine">
-                            <label for="mongoengine">Mongoengine</label>
-                        </div>
-                        <div class="box">
-                            <input type="checkbox" name="languages" value="pymongo" id="pymongo">
-                            <label for="pymongo">Pymongo</label>
-                        </div>
-                        <div class="box">
-                            <input type="checkbox" name="languages" value="sqlalchemy" id="sqlalchemy">
-                            <label for="sqlalchemy">Sqlalchemy</label>
-                        </div>
-                       
-                    </div>
                 </div>
 
-                <!-- search by if it has website, doesn't or a combination -->
-                <div class="box">
-                    <label for="has-website">Has website</label>
-                    <input type="radio" name="has-website" id="has-website" value="true">
-                    <label for="has-website">Yes</label>
-                    <input type="radio" name="has-website" id="no-website" value="false">
-                    <label for="no-website">No</label>
-                    <input type="radio" name="has-website" id="both" value="both" checked>
-                    <label for="both">Both</label>
-                </div>
+                {% endif %}
 
-                <label for="keywords">Search by keywords (Separate by commas)</label>
-                <input type="text" name="keywords" id="keywords" placeholder="Keywords" maxlength="400">
+                <!-- search by other packages -->
+                {% if search_form.libraries %}
+                <p class="padding-top-xsm">Others / Libraries / Packages</p>
+                <div class="frameworks grid-box" aria-label="Others / Libraries / Packages">
 
-                <div class="search-by-date" aria-label="Date Range">
-                    <div class="from-date">
-                        <label for="from-date">From Date</label>
-                        <input type="date" name="from-date" id="from-date">
+                    {% for library in search_form.libraries %}
+                    <div class="box">
+                        {{ library }}
                     </div>
+                    {% endfor %}
 
-                    <div class="to-date">
-                        <label for="to-date">To Date</label>
-                        <input type="date" name="to-date" id="to-date">
-                    </div>
+                </div>
+            </div>
+            {% endif %}
+
+            <!-- search by if it has website, doesn't or a combination -->
+            <div class="box padding-bottom-xsm">
+                <label for="has-website">Has website</label>
+                {% for choice in search_form.have_website %}
+                     {{ choice }}
+                {% endfor %}
+            </div>
+
+
+            <!-- keywords -->
+            <div class="box padding-bottom-xsm">
+                {{ search_form.keywords.label }}
+                {{ search_form.keywords }}
+            </div>
+
+            <div class="search-by-date padding-bottom-xsm" aria-label="Date Range">
+                <div class="from-date">
+                    {{ search_form.from_date.label }}
+                    {{ search_form.from_date }}
                 </div>
 
-                <!-- The results to display per page -->
-                <label for="result-per-page">Result per page</label>
-                <select name="result-per-page" id="result-per-page">
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                </select>
-
-                <!-- sort by the latest or oldest -->
-                <label for="sortProjectsBy">Sort projects by</label>
-                <select name="sortProjectsBy" id="sortProjectsBy">
-                    <option value="latest" checked>Latest</option>
-                    <option value="oldest">Oldest</option>
-                </select>
-
-                <!-- Sort by the project status e.g completed, Uncompleted or in progress -->
-                <label for="projectStatus">Project status</label>
-                <select name="projectStatus" id="projectStatus">
-                    <option value="status">Status</option>
-                    <option value="completed">Completed</option>
-                    <option value="Uncompleted">Uncompleted</option>
-                    <option value="InProgress">In progress</option>
-                </select>
-
-                <div class="buttons">
-                    <button type="reset" class="reset-btn red-bg color-white reset-btn">Reset</button>
-                    <button type="submit" class="search-btn green-bg color-white">Search</button>
+                <div class="to-date">
+                    {{ search_form.to_date.label }}
+                    {{ search_form.to_date }}
                 </div>
-            </form>
+            </div>
 
-        </div>
+            <!-- The results to display per page -->
+
+            <div class="box padding-top-xsm">
+                {{ search_form.result_per_page.label }}
+                {{ search_form.result_per_page }}
+            </div>
+
+
+            <!-- sort by the latest or oldest -->
+            <div class="box padding-top-xsm">
+                {{ search_form.sort_by.label }}
+                {{ search_form.sort_by }}
+            </div>
+
+            <!-- Sort by the project status e.g completed, Uncompleted or in progress -->
+            <div class="box padding-top-xsm">
+                {{ search_form.progress_status.label }}
+                {{ search_form.progress_status }}
+
+            </div>
+
+            <div class="buttons">
+                <button type="reset" class="reset-btn red-bg color-white reset-btn">Reset</button>
+                <button type="submit" class="search-btn green-bg color-white">Search</button>
+            </div>
+        </form>
+
     </div>
+</div>

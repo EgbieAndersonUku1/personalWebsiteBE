@@ -7,6 +7,7 @@ class ProjectModel(models.Model):
     class HaveWebsiteChoices(models.TextChoices):
         YES  = "y", "Yes"
         NO   = "n", "No"
+        BOTH = "b", "Both"
       
     class ProjectStatus(models.TextChoices):
         IN_PROGRESS = "ip", "In progress"
@@ -24,7 +25,7 @@ class ProjectModel(models.Model):
     featured        = models.BooleanField(default=False)
     framework       = models.ManyToManyField("FrameworkModel", blank=True)
     libraries       = models.ManyToManyField("LibraryModel", blank=True)
-    have_website    = models.CharField(max_length=4,  choices=HaveWebsiteChoices.choices, default=HaveWebsiteChoices.NO)
+    have_website    = models.CharField(max_length=4,  choices=HaveWebsiteChoices.choices, default=HaveWebsiteChoices.NO, verbose_name="Has Website")
     website_url     = models.URLField(max_length=255, blank=True, null=True)
     github_url      = models.URLField(max_length=255)
     progress_status = models.CharField(max_length=2, choices=ProjectStatus.choices, default=ProjectStatus.IN_PROGRESS)

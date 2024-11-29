@@ -264,6 +264,11 @@ label {
   padding-top: var(--padding-sm);
 }
 
+
+.padding-top-xsm {
+  padding-top: 3px;
+}
+
 .padding-top-xsm {
   padding-top: var(--padding-xs);
 }
@@ -911,6 +916,7 @@ footer .container {
 
   /* display: none; */
   padding-top: 5px;
+  overflow-y: scroll;
 }
 
 #search .container.show {
