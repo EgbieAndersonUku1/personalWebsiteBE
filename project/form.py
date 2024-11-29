@@ -2,7 +2,6 @@ from django import forms
 from project.models import ProjectModel
 
 
-
 class SearchForm(forms.ModelForm):
     CHOICES = [(str(i), str(i)) for i in range(1, 11)]
     

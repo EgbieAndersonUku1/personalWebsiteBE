@@ -73,15 +73,21 @@
   - [ ] Modified at
   - [ ] Created on
 
-- [ ] **AboutModel (model.Model)**
+- [X] **AboutModel (model.Model)**
   - [ ] User (ForeignKey)
-  - [ ] About
-  - [ ] Created on
-  - [ ] Modified on
+  - [X] About
+  - [X] Created on
+  - [X] Modified on
 
 - [ ] **Tags (model.Model)**
   - [ ] User (ForeignKey)
   - [ ] Tag
+  - [ ] Modified at
+  - [ ] Created at
+
+- [ ] **User (model.Model)**
+  - [ ] name
+  - [ ] email
   - [ ] Modified at
   - [ ] Created at
 
@@ -160,7 +166,7 @@
 
 ## Project Views
 
-1. [] **`add_project(request)`**
+1. [X] **`add_project(request)`**
    * Accepts `POST` data.
    * Validates using `AddProjectForm`.
    * Saves the project and redirects to the success page.
