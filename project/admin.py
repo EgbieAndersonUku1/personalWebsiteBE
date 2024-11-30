@@ -14,7 +14,7 @@ class BaseLanguageAdmin(admin.ModelAdmin):
     
     
 class ProjectAdmin(admin.ModelAdmin):
-    list_display       = ["id", "name", "created_on", "modified_on", "featured", "have_website", "progress_status"]
+    list_display       = ["id", "name", "created_on", "modified_on", "featured", "have_website", "featured", "progress_status"]
     filter_horizontal  = ("frontend_lang", "backend_lang", "framework", "libraries")  
     list_display_links = ["id", "name"]
     list_per_page      = 30
@@ -62,7 +62,7 @@ class ProjectAdmin(admin.ModelAdmin):
             "Additional information",
             {
                 "classes": ["collapse"],
-                "fields": ["have_website", "progress_status", "created_on", "modified_on"],
+                "fields": ["have_website", "progress_status", "created_on", "modified_on", "featured"],
             },
         ),
     ]
