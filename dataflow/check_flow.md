@@ -194,6 +194,7 @@
 3. **`home_page(request)`**:
   - [X] home_page
        - return homepage
+  - [X] show projects on homepage
 
 4. - [X] faq
       - return faq page
