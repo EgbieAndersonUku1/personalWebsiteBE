@@ -54,11 +54,14 @@ pip install -r requirements.txt
 ## Apply database migrations
 python manage.py migrate
 
-## (Optional) Create a superuser
+## Create a superuser
 python manage.py createsuperuser
 
 ## Run the development server
 python manage.py runserver
+
+## Run the requirements
+pip install -r .\requirements.txt
 
 ## You Can View My Projects by Clicking on the Link Below
 Link coming soon.
