@@ -1,265 +1,33 @@
+{% load static %}
 
+<!-- The general information section -->
 
-<section id="FAQ-aboutme" aria-labelledby="aboutme-heading">
-    <div class="container">
-
-        {% if questions %}
+{% if technical_faq %}
+    <section id="FAQ-aboutme" aria-labelledby="aboutme-heading">
+        <div class="container">
             <div class="header">
                 <p class="title" id="aboutme-heading">Technical Expertise && Software development</p>
             </div>
 
-            <div class="questions" aria-label="About Me Questions">
-                {}
+            <div class="questions" aria-label="Frequently Asked Questions">
+
+                {% for faq in technical_faq %}
+                    <div class="question">
+                        <div class="question-container flex-space-between">
+                            <a class="question-link" aria-expanded="false" aria-controls="question{{ faq.id }}-answer"> {{ faq.question | title }} </a>
+                            <img src="{% static '/img/icons/svg/caret-right.svg' %}" alt="The caret down sign" class="caret-down">
+                        </div>
+
+                        <div class="answer-container" id="question{{ faq.id }}-answer" aria-hidden="true">
+                           {{ faq.answer | safe }}
+                        </div>
+                    </div>
+
+                {% endfor %}
             </div>
-        {% endif %}
-        
-
-        <div class="questions" aria-label="About Me Questions">
-            <div class="question">
-                <div class="question-container flex-space-between">
-                    <a class="question-link" aria-expanded="false" aria-controls="question1-answer">What
-                        technologies do you use in your projects?</a>
-                    <img src="static/img/icons/svg/caret-right.svg" alt="The caret down sign"
-                        class="caret-down">
-                </div>
-
-                <div class="answer-container" id="question1-answer" aria-hidden="true">
-                    <p class="answer padding-bottom-xsm">
-                        I use a variety of technologies depending on the requirements of each project.
-                        Some of the commonly used technologies include HTML, CSS, JavaScript, Node JS,
-                        Express JS, Python (with Django or Flask), SQL databases (such as PostgreSQL, MySQL,
-                        SQlite) via a tool called an ORM.
-                        and Git for version control.
-                    </p>
-
-                    <p class=" bold answer padding-bottom-xsm">
-                        What is an ORM?
-                    </p>
-
-                    <p class="answer padding-bottom-xsm">
-                        ORM stands for Object-Relational Mapping. It's a programming technique used to convert
-                        data between incompatible type systems, i.e., between object-oriented programming
-                        languages and relational databases.
-
-                    </p>
-
-                    <p class="padding-bottom-xsm">
-                        In an ORM system, each table in a relational database is mapped to a class in the
-                        programming language, and each row in the table is represented as an object of that
-                        class. This allows developers to interact with the database using objects and methods,
-                        rather than writing SQL queries directly.
-
-                        ORMs provide a level of abstraction that simplifies database interactions and makes code
-                        more maintainable and readable.
-
-                    </p>
-
-                    <p class="answer padding-bottom-xsm">
-                        Popular ORM libraries in various programming languages include Hibernate for Java,
-                        Entity Framework for .NET, SQLAlchemy for Python, and ActiveRecord for Ruby.
-                    </p>
-
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-container flex-space-between">
-                    <a class="question-link" aria-expanded="false" aria-controls="question2-answer">How do you
-                        ensure code quality and maintainability?</a>
-                    <img src="static/img/icons/svg/caret-right.svg" alt="The caret down sign"
-                        class="caret-down">
-                </div>
-
-                <div class="answer-container" id="question2-answer" aria-hidden="true">
-                    <p class="answer padding-bottom-xsm">
-                        <span class="bold">Linting and Static Analysis:</span> I utilize code linting tools and
-                        static analysis to enforce coding standards, identify potential errors, and maintain
-                        consistent code style across the project. This helps improve readability, reduce bugs,
-                        and enhance overall code quality.
-                    </p>
-                    <p class="answer padding-bottom-xsm">
-                        <span class="bold">Modular Design and Separation of Concerns: </span> I follow
-                        principles of modular design and separation of concerns to break down complex systems
-                        into smaller, reusable components. This approach promotes code reusability, improves
-                        maintainability, and facilitates easier debugging and troubleshooting.
-                    </p>
-
-                    <p class="answer padding-bottom-xsm">
-                        <span class="bold">Refactoring:</span> I regularly revisit and refactor code to keep it
-                        clean, efficient, and aligned with evolving requirements. Refactoring helps eliminate
-                        technical debt, improve code readability, and enhance overall system robustness
-                    </p>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-container flex-space-between">
-                    <a class="question-link" aria-expanded="false" aria-controls="question1-answer">What is your
-                        experience with version control systems like Git?</a>
-                    <img src="static/img/icons/svg/caret-right.svg" alt="The caret down sign"
-                        class="caret-down">
-                </div>
-
-                <div class="answer-container" id="question1-answer" aria-hidden="true">
-                    <p class="answer padding-bottom-xsm">
-                        Throughout my projects, I utilize Git for tasks such as branching, merging, and
-                        resolving conflicts, ensuring seamless collaboration and code management. Additionally,
-                        I am proficient in using Git repositories, branches, commits, and pull requests to
-                        facilitate organized and efficient software development processes.
-                        Over time, I have honed my skills in leveraging Git's features and best practices,
-                        enabling me to contribute effectively to team projects and maintain code quality and
-                        integrity across various development environments.
-
-                    </p>
-
-
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-container flex-space-between">
-                    <a class="question-link" aria-expanded="false" aria-controls="question1-answer">How do you
-                        handle security and data privacy in your projects?</a>
-                    <img src="static/img/icons/svg/caret-right.svg" alt="The caret down sign"
-                        class="caret-down">
-                </div>
-
-                <div class="answer-container" id="question1-answer" aria-hidden="true">
-                    <p class="answer padding-bottom-xsm">
-                        <span class="bold">Data Encryption:</span> Implement encryption protocols to secure data
-                        both in transit and at rest. Utilize encryption algorithms such as AES (Advanced
-                        Encryption Standard) to encode sensitive information, ensuring that even if data is
-                        intercepted, it remains unintelligible to unauthorized users.
-                    </p>
-
-                    <p class="answer padding-bottom-xsm">
-                        <span class="bold">Access Control:</span> Implement robust access control mechanisms to
-                        restrict access to sensitive data based on user roles and permissions. Utilize
-                        authentication methods such as multi-factor authentication (MFA)
-                        and role-based access control (RBAC) to ensure that only authorized personnel can access
-                        and modify critical information.
-                        For instance, in a Django application where users can log in, it's crucial to prevent
-                        unintended access to administrative sections. By default, Django allows registered users
-                        to access the admin section with the same password they used to log into your account,
-                        potentially granting them administrative privileges across the entire site.
-                        To address this, customization of the Django user class backend is necessary to limit
-                        user access appropriately.
-
-                    </p>
-
-                    <p class="answer padding-bottom-xsm">
-                        <span class="bold">Secure Authentication:</span> Employ secure authentication practices
-                        to verify the identity of users accessing the system. Implement strong password policies
-                    </p>
-
-                    <p class="answer padding-bottom-xsm">
-                        <span class="bold">Regular Updates and Patch Management:</span> Keep software
-                        dependencies, frameworks, and libraries up to date with the latest security patches and
-                        updates
-                    </p>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-container flex-space-between">
-                    <a class="question-link" aria-expanded="false" aria-controls="question1-answer">What sets
-                        you apart from other developers/designers?</a>
-                    <img src="static/img/icons/svg/caret-right.svg" alt="The caret down sign"
-                        class="caret-down">
-                </div>
-
-                <div class="answer-container" id="question1-answer" aria-hidden="true">
-                    <p class="answer">What sets me apart is my combination of technical expertise,
-                        creative problem-solving skills, and commitment to delivering high-quality results.
-                        I strive to stay updated on the latest industry trends and best practices, and I
-                        approach each
-                        project with enthusiasm, professionalism, and attention to detail.
-                    </p>
-                </div>
-            </div>
-
-            <div class="question">
-                <div class="question-container flex-space-between">
-                    <a class="question-link" aria-expanded="false" aria-controls="question2-answer">What steps
-                        are you taking or are taking to
-                        enhance code quality and readability,
-                        and which resources or tools are you utilizing for this purpose?</a>
-                    <img src="static/img/icons/svg/caret-right.svg" alt="The caret down sign"
-                        class="caret-down">
-                </div>
-
-                <div class="answer-container flex-col" id="question2-answer" aria-hidden="true">
-
-
-
-
-                    <p> I adhere to the best practices and principles for
-                        writing clean, readable, and maintainable code. For example, I often refer to
-                        documentation
-                        such as PEP-8, which provides guidelines for writing clean and maintainable Python code.
-                        Additionally,
-                        I make use of various libraries like ESLint, a powerful static code analysis tool for
-                        JavaScript
-                        and Node.js, to help enforce coding standards, detect syntax errors, and promote
-                        consistent code
-                        style within our team.
-                    </p>
-
-
-
-
-
-                </div>
-            </div>
-
-
-            <div class="question">
-                <div class="question-container flex-space-between">
-                    <a class="question-link" aria-expanded="false" aria-controls="question3-answer">Are there
-                        any technologies or frameworks you haven't used but which to?</a>
-                    <img src="static/img/icons/svg/caret-right.svg" alt="The caret down sign"
-                        class="caret-down">
-                </div>
-
-                <div class="answer-container padding-top-sm" id="question3-answer" aria-hidden="true">
-                    <p class="answer padding-bottom-sm">
-                        Within my portfolio, I have been exposed to many technologies and frameworks, ranging
-                        from technologies like Python, HTML, JS, Fetch-APIs, etc to frameworks like Django,
-                        Flask, Express JS, to name but a few. However, there are tools and technologies that I
-                        haven't been exposed to yet, and I would love to explore them to enhance my software's
-                        capabilities. Some of the frameworks and technologies that I am eager to incorporate
-                        include React, Vue, C#, .NET, and TypeScript. These frameworks offer robust solutions
-                        for various aspects of software development, such as user interface design, backend
-                        functionality, and language enhancements.
-                    </p>
-
-                    <p class="answer padding-bottom-sm">
-                        React, for instance, is renowned for its component-based approach to building user
-                        interfaces, which can result in more efficient and maintainable code. C# and .NET, on
-                        the other hand, provide powerful tools for backend development, offering scalability,
-                        security, and performance. TypeScript, as a superset of JavaScript, brings static typing
-                        and other advanced features to the table, enabling developers to catch errors early and
-                        write more predictable code.
-                    </p>
-
-                    <p class="answer padding-bottom-sm">
-                        In addition to frameworks, there are also technologies I am eager to explore in the
-                        future. These include cloud computing platforms such as AWS, TailWind, machine learning
-                        libraries, etc or emerging protocols and standards that could further enhance Porfilo's
-                        functionality and performance.
-                    </p>
-                </div>
-
-
-
-
-
-
-
-
-
-            </div>
-
         </div>
-    </div>
-</section>
+    </section>
+{% endif %}
+
+
+

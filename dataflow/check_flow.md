@@ -59,12 +59,12 @@
     - [X] Retrieve all skills
     - [X] Return a list of skills
 
-- [ ] **FAQModel (model.Model)**
+- [X] **FAQModel (model.Model)**
   - [ ] User (ForeignKey)
-  - [ ] Question
-  - [ ] Answer
-  - [ ] Created at
-  - [ ] Modified at
+  - [X] Question
+  - [X] Answer
+  - [X] Created at
+  - [X] Modified at
 
 - [ ] **Skills (model.Model)**
   - [ ] User (ForeignKey)
