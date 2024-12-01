@@ -1,35 +1,33 @@
+{% load static %}
 
-<section id="contact-me" aria-labelledby="contact-me-heading">
-    <div class="container">
+<!-- The contact information section -->
 
-        {% if questions %}
+{% if contact_faq %}
+    <section id="contact-me" aria-labelledby="contact-me-heading">
+        <div class="container">
             <div class="header">
                 <p class="title" id="contact-me-heading">Contact Me</p>
             </div>
 
             <div class="questions" aria-label="Contact Me Questions">
-                
-                {% for question in questions %}
-               
+
+                {% for faq in contact_faq %}
                     <div class="question">
                         <div class="question-container flex-space-between">
-                            <a class="question-link" aria-expanded="false" aria-controls="question1-answer">How can I
-                                get in touch with you?</a>
-                            <img src="static/img/icons/svg/caret-right.svg" alt="The caret down sign"
-                                class="caret-down">
+                            <a class="question-link" aria-expanded="false" aria-controls="question{{ forloop.counter }}-answer"> {{ faq.question | title }} </a>
+                            <img src="{% static '/img/icons/svg/caret-right.svg' %}" alt="The caret down sign" class="caret-down">
                         </div>
-        
-                        <div class="answer-container" id="question1-answer" aria-hidden="true">
-                            <p class="answer">
-                                You can send me a message by clicking the <a href="mailto:egbieuku@hotmail.com"
-                                    class="bold">send email link</a>
-        
-                            </p>
+
+                        <div class="answer-container" id="question{{ forloop.counter}}-answer" aria-hidden="true">
+                           {{ faq.answer | safe }}
                         </div>
                     </div>
+
                 {% endfor %}
             </div>
-        {% endif %}
-           
-    </div>
-</section>
+        </div>
+    </section>
+{% endif %}
+
+
+

@@ -12,7 +12,7 @@
     <!-- The call to action for the FAQ -->
     <section id="FAQ" aria-labelledby="faq-heading">
         <div class="container">
-            <img src="static/img/png/FAQ.png" alt="The FAQ image" class="FAQ-main-image" aria-hidden="true">
+            <img src="{% static '/img/png/FAQ.png' %}" alt="The FAQ image" class="FAQ-main-image" aria-hidden="true">
             <h2 id="faq-heading" class="sr-only">Frequently Asked Questions</h2>
         </div>
     </section>
@@ -25,6 +25,10 @@
 
     <!-- The contact section -->
     {% include "partials/faq/_contact.html" %}
+
+
+     <!-- The hobbies section -->
+     {% include "partials/faq/_hobbies.html" %}
 
 
 

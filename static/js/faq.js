@@ -24,14 +24,13 @@ questions.forEach((question) => {
 function toggleAnswer(answer, imgCaret) {
     if (answer.style.display === "block") {
         answer.style.display = "none";
-        imgCaret.src = "static/img/icons/svg/caret-right.svg";
+        imgCaret.src = caretRightUrl;  // Use the global variable located in base.html
         imgCaret.alt = "The caret is open";
     } else {
         answer.style.display = "block";
-        imgCaret.src = "static/img/icons/svg/caret-down.svg";
+        imgCaret.src = caretDownUrl;  // Use the global variable located in base.html
         imgCaret.alt = "The caret is closed";
     }
 }
-
 
 
