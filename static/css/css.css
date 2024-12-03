@@ -521,7 +521,7 @@ nav .container {
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: 10px;
+  column-gap: 1px;
 
   width: var(--global-width-lg);
   margin: auto;

@@ -10,10 +10,10 @@ const loadResultBtn        = document.querySelector(".load-results-btn");
 const loadMoreBtnElement   = document.querySelector(".load-more-btn");
 const notFoundElement      = document.querySelector(".not-found");
 const resetBtnElement      = document.querySelector(".reset-btn");
-const searchForm           = document.querySelector(".search-form");
+const searchForm           = document.getElementById("search-form");
 const spinner              = document.querySelector(".spinner");
 
-
+console.log(searchForm);
 const TIME_IN_MILLISECONDS = 1000;
 
 // Initialise the classes
@@ -47,166 +47,6 @@ function handleResetBtn() {
 
 
 /**
- * Filters projects by name based on a search string.
- * @param {Array} projects - An array of project objects to filter.
- * @param {string} searchName - The search string to filter projects by name.
- * @returns {Array} - An array of filtered project objects.
- */
-function filterProjectByName(projects, searchName) {
-    if (!searchName) {
-        return projects;
-    }
-    return projects.filter(project => project.name.toLowerCase().includes(searchName.toLowerCase()));
-}
-
-
-/**
- * Filters projects by selected languages.
- * @param {Array} projects - An array of project objects to filter.
- * @param {Array} selectedLanguages - An array of selected languages to filter projects by.
- * @returns {Array} - An array of filtered project objects.
- */
-function filterProjectByLanguage(projects, selectedLanguages) {
-
-    if (selectedLanguages.length === 0) {
-        return projects
-    }
-    return projects.filter(project => {
-        return selectedLanguages.some(language => {
-            return language && project.languages.some(lang => lang.toLowerCase().includes(language.toLowerCase()));
-        });
-    });
-}
-
-
-/**
- * Filters projects based on the presence of a website.
- * @param {Array} projects - An array of project objects to filter.
- * @param {string} hasWebsite - A string indicating the presence of a website ("true", "false", or "both").
- * @returns {Array} - An array of filtered project objects.
- */
-function filterProjectByWebsite(projects, hasWebsite) {
-    if (hasWebsite.toLowerCase() === "both") {
-        return projects.filter(project => project.hasWebsite === true || project.hasWebsite === false);
-    } else {
-        const hasWebsiteBoolean = hasWebsite === 'true';
-        return projects.filter(project => project.hasWebsite === hasWebsiteBoolean);
-    }
-}
-
-
-/**
- * Filters projects based on keywords/tags.
- * @param {Array} projects - An array of project objects to filter.
- * @param {Array} keywords - An array of keywords/tags to filter by.
- * @returns {Array} - An array of filtered project objects.
- * @throws {Error} - If keywords parameter is not an array.
- */
-function filterByKeywords(projects, keywords) {
-    const EMPTY_STRING = '';
- 
-    if (!(Array.isArray(keywords))) {
-        throw new Error("The keywords must be a list");
-    } else if (keywords[0] === EMPTY_STRING) {
-        return projects;
-    }
-
-    return projects.filter(project => {
-        return keywords.some(keyword => {
-            return project.tags.some(tag => tag.toLowerCase().trim() === keyword.toLowerCase().trim())
-        })
-    })
-}
-
-
-
-
-/**
- * Filters projects based on date range.
- * @param {Array} projects - An array of project objects to filter.
- * @param {string} fromDate - The start date of the date range (in ISO 8601 format).
- * @param {string} toDate - The end date of the date range (in ISO 8601 format).
- * @returns {Array} - An array of filtered project objects.
- */
-function filterProjectsByDate(projects, fromDate, toDate) {
-
-    if (!(fromDate) || (!(toDate))) {
-        return projects;
-    }
-    return projects.filter(project => {
-        const projectDate = new Date(project.dateCreated);
-        const startDate = new Date(fromDate); 
-        const endDate = new Date(toDate); 
-        return projectDate >= startDate && projectDate <= endDate;
-    });
-}
-
-
-/**
- * Sorts projects based on date.
- * @param {Array} projects - An array of project objects to sort.
- * @param {string} sortProjectBy - The sorting order. Must be either "latest" or "oldest".
- * @returns {Array} - An array of sorted project objects.
- * @throws {Error} - If an invalid sorting order is provided.
- */
-function sortProjectByDate(projects, sortProjectBy) {
-
-    const sortOrder = {
-        LATEST : "latest",
-        OLDEST : "oldest",
-    }
-    const lowerCaseSortProjectBy = sortProjectBy.toLowerCase();
-    
-    if (lowerCaseSortProjectBy === sortOrder.LATEST) {
-        return sortByDateLatestToOldest(projects);
-    } else if (lowerCaseSortProjectBy === sortOrder.OLDEST) {
-        return sortByDateOldestToLatest(projects);
-    } else {
-        throw new Error("Invalid sort order. Please provide 'latest' or 'oldest'.");
-    }
-}
-
-
-
-/**
- * Sorts an array of projects from latest to oldest based on date.
- * @param {Array} projects - An array of project objects to sort.
- * @returns {Array} - An array of sorted project objects from latest to oldest date.
- */
-function sortByDateLatestToOldest(projects) {
-    return projects.slice().sort((a, b) => new Date(b.dateCreated) - new Date(a.dateCreated));
-}
-
-/**
- * Sorts an array of projects from oldest to latest based on date.
- * @param {Array} projects - An array of project objects to sort.
- * @returns {Array} - An array of sorted project objects from oldest to latest date.
- */
-function sortByDateOldestToLatest(projects) {
-    return projects.slice().sort((a, b) => new Date(a.dateCreated) - new Date(b.dateCreated));
-}
-
-
-
-/**
- * Filters an array of projects based on their status.
- * @param {Array} projects - An array of project objects to filter.
- * @param {string} status - The status to filter projects by.
- * @returns {Array} - An array of projects filtered by the specified status.
- */
-function filterByProjectStatus(projects, status) {
-    const STATUS = "status";
-    if (status === STATUS) {
-        return projects;
-    }
-    return projects.filter((project) => {
-        return project.projectStatus && project.projectStatus.toLowerCase() === status.toLowerCase()
-    });
-}
-
-
-
-/**
  * Checks if the provided dates are valid.
  * @param {Date} fromDate - The start date.
  * @param {Date} toDate - The end date.
@@ -230,9 +70,7 @@ function isDatesValid(fromDate, toDate) {
 function handleForm(e) {
     e.preventDefault();
 
-    // Copy the repositories array
-    let projects = [...repositories];
-   
+ 
     const buttonLabel = "Load";
 
     // Get form data
@@ -243,23 +81,28 @@ function handleForm(e) {
     const fromDate = formData.get("from-date");
     const toDate   = formData.get("to-date");
 
-    
     isDatesValid(fromDate, toDate);
     
     // Filter projects based on form data
-    projects = filterProjectByName(projects, formData.get("name"));
-    projects = filterProjectByLanguage(projects, formData.getAll("languages"));
-    projects = filterProjectByWebsite(projects, formData.get("has-website"));
-    projects = filterByKeywords(projects, keywords)
-    projects = filterProjectsByDate(projects, fromDate, toDate); 
-    projects = sortProjectByDate(projects, formData.get("sortProjectsBy"));
-    projects = filterByProjectStatus(projects, formData.get("projectStatus"));
+    const name       = formData.get("name");
+    const language   = formData.getAll("languages");
+    const hasWebsite =  formData.get("has-website");
+   
+    const sortProjectBy  = formData.get("sortProjectsBy");
+    const projectStatus  = formData.get("projectStatus");
+    const perPage        = parseInt(formData.get("result-per-page"));
      
     loadResultBtn.textContent = buttonLabel;
 
-    projectLoader.setProjectPerPage(parseInt(formData.get("result-per-page")));
-    projectLoader.setProjectsRepo(projects);
-
+    projectLoader.setProjectPerPage(perPage);
+    // projectLoader.setProjectsRepo(projects);
+    console.log(name);
+    console.log(keywords);
+    console.log(language);
+    console.log(hasWebsite);
+    console.log(sortProjectBy);
+    console.log(projectStatus);
+    console.log(perPage);
    
     displayProjects(projects);
 }

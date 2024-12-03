@@ -230,7 +230,7 @@
 ## Frontend Integration
 - [X] Add JavaScript for interactive elements
 - [X] Integrate dynamic search using JavaScript fetch
-- [X] Add responsive design for mobile and desktop
+- [ ] Add responsive design for mobile and desktop
 
 
 

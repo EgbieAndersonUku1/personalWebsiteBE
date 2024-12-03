@@ -111,3 +111,16 @@ def create_json_response(data, message, code):
         JsonResponse: A JSON response with the specified payload and status code.
     """
     return JsonResponse({"data": data, "message": message}, status=code)
+
+
+def search_projects(request):
+    
+    if request.method == "POST":
+        data = json.loads(request.body.decode('utf-8'))
+        form = data.get("form")
+        
+        # to add functionality to go here
+    
+    
+    message = "Invalid request method. Only POST requests are allowed."
+    return create_json_response(data={}, message=message, code=405)

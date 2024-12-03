@@ -30,7 +30,6 @@ async function getRepositories()  {
       
         const url          = `${BASE_URL}/projects/`;
         const repositories = await fetchData({url:url});
-        console.log(repositories.data);
         projectLoader.setProjectsRepo(repositories.data);
     } catch (error) {
         throw new Error (`Something went wrong and the repositories couldn't be retrieved - ${error}`)
