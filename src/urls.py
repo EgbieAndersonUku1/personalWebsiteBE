@@ -23,6 +23,7 @@ urlpatterns = [
     path("", include("home.urls")),
     path("faq/", include("faq.urls")),
     path("projects/", include("project.urls")),
+    path("", include("django_auth_recovery_codes.urls")), 
     
     # CKEditor URL configuration
     path("ckeditor5/", include('django_ckeditor_5.urls')),

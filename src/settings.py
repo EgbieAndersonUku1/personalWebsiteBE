@@ -13,6 +13,12 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 from pathlib import Path
 from os.path import join
 
+from dotenv import load_dotenv
+from os import environ
+
+load_dotenv() 
+
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR       = Path(__file__).resolve().parent.parent
 TEMPLATES_DIRS = join(BASE_DIR, "templates")
@@ -33,7 +39,8 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'jazzmin',
-    
+    "django_auth_recovery_codes",
+    "django_q",
     'about.apps.AboutConfig',
     'home.apps.HomeConfig',
     'faq.apps.FaqConfig',
@@ -222,3 +229,114 @@ CKEDITOR_5_CONFIGS = {
 # Define a constant in settings.py to specify file upload permissions
 CKEDITOR_5_FILE_UPLOAD_PERMISSION = "staff"
 
+
+
+
+
+# setting up the flags
+# ===========================
+# 📧 Email / Admin
+# ===========================
+
+DJANGO_AUTH_RECOVERY_CODES_ADMIN_SENDER_EMAIL   = environ["DJANGO_AUTH_RECOVERY_CODES_ADMIN_SENDER_EMAIL"]
+DJANGO_AUTH_RECOVERY_CODE_ADMIN_EMAIL_HOST_USER = environ["DJANGO_AUTH_RECOVERY_CODE_ADMIN_EMAIL_HOST_USER"]
+DJANGO_AUTH_RECOVERY_CODE_ADMIN_USERNAME        = environ["DJANGO_AUTH_RECOVERY_CODE_ADMIN_USERNAME"]
+DJANGO_AUTH_RECOVERY_CODE_STORE_EMAIL_LOG       = False
+
+
+# ===========================
+# 🔑 Security / Keys
+# ===========================
+DJANGO_AUTH_RECOVERY_KEY = environ["DJANGO_AUTH_RECOVERY_KEY"]
+
+# ===========================
+# 📜 Audit / Retention
+# ===========================
+DJANGO_AUTH_RECOVERY_CODE_AUDIT_ENABLE_AUTO_CLEANUP = True
+DJANGO_AUTH_RECOVERY_CODE_AUDIT_RETENTION_DAYS = 30
+DJANGO_AUTH_RECOVERY_CODE_PURGE_DELETE_RETENTION_DAYS = 30
+DJANGO_AUTH_RECOVERY_CODE_PURGE_DELETE_SCHEDULER_USE_LOGGER = True
+
+# ===========================
+# ⏳ Rate Limiting / Cooldowns
+# ===========================
+DJANGO_AUTH_RECOVERY_CODES_AUTH_RATE_LIMITER_USE_CACHE = True
+DJANGO_AUTH_RECOVERY_CODES_BASE_COOLDOWN = 100  # five minutes minutes lock down
+DJANGO_AUTH_RECOVERY_CODES_COOLDOWN_CUTOFF_POINT = 3600
+DJANGO_AUTH_RECOVERY_CODES_COOLDOWN_MULTIPLIER = 2
+DJANGO_AUTH_RECOVERY_CODES_MAX_LOGIN_ATTEMPTS = 5
+
+# ===========================
+# 📦 Caching
+# ===========================
+DJANGO_AUTH_RECOVERY_CODES_CACHE_MAX = 3600
+DJANGO_AUTH_RECOVERY_CODES_CACHE_MIN = 1
+DJANGO_AUTH_RECOVERY_CODES_CACHE_TTL = 3600
+
+# ===========================
+# 📊 Pagination / Limits
+# ===========================
+DJANGO_AUTH_RECOVERY_CODE_MAX_VISIBLE = 20
+DJANGO_AUTH_RECOVERY_CODE_PER_PAGE = 5
+DJANGO_AUTH_RECOVERY_CODES_BATCH_DELETE_SIZE = 400
+DJANGO_AUTH_RECOVERY_CODES_MAX_DELETIONS_PER_RUN = -1
+
+# ===========================
+# 📂 Files / Naming
+# ===========================
+DJANGO_AUTH_RECOVERY_CODES_DEFAULT_FILE_NAME = "recovery_codes"
+DJANGO_AUTH_RECOVERY_CODES_DEFAULT_FORMAT = "txt"
+
+# ===========================
+# 🌍 Site / Redirects
+# ===========================
+DJANGO_AUTH_RECOVERY_CODES_SITE_NAME = "Personal profile"
+DJANGO_AUTH_RECOVERY_CODE_REDIRECT_VIEW_AFTER_LOGOUT = "logout_user"
+
+
+
+# ===========================
+# 🌍 REcovery code email sucess message
+# ===========================
+DJANGO_AUTH_RECOVERY_CODE_EMAIL_SUCCESS_MSG = "Your recovery codes email has been successfully delivered."
+
+
+# add the email backend testing
+EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
+EMAIL_FILE_PATH = BASE_DIR / "sent_emails"
+Path(EMAIL_FILE_PATH).mkdir(parents=True, exist_ok=True)
+
+
+# Add the Q_CLUSTER for django-1
+
+Q_CLUSTER = {
+    'name': 'recovery_codes',
+    'workers': 2,
+    'timeout': 300,   # 5 minutes max per task
+    'retry': 600,     # retry after 10 minutes if task fails (retry must be greater than timeout)
+    'recycle': 500,
+    'compress': True,
+    'cpu_affinity': 1,
+    'save_limit': 250,
+    'queue_limit': 500,
+    'orm': 'default',
+}
+
+
+# we need to tell EmailSender where to find the templates dir
+
+import django_auth_recovery_codes
+from pathlib import Path
+
+# Get the path to the installed package
+PACKAGE_DIR = Path(django_auth_recovery_codes.__file__).parent
+
+# Define the templates directory within the package
+MYAPP_TEMPLATES_DIR = PACKAGE_DIR / "templates" / "django_auth_recovery_codes"
+
+
+# we need to add in the logging
+from django_auth_recovery_codes.loggers.logger_config import DJANGO_AUTH_RECOVERY_CODES_LOGGING
+
+
+LOGGING = DJANGO_AUTH_RECOVERY_CODES_LOGGING
